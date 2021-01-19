@@ -13,14 +13,13 @@
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
-        "facebook/webdriver": "^1.9.1",
-        "php-webdriver/webdriver": "^1.9.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/dusk": "^6.6",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "yajra/laravel-datatables-oracle": "^9.11",
+        "spatie/laravel-medialibrary": "^8.7",
         "laravel/sanctum": "^2.8"
     },
     "require-dev": {

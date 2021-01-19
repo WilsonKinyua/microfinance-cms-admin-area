@@ -26,7 +26,7 @@
                             {{ trans('cruds.service.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.service.fields.service_name') }}
+                            {{ trans('cruds.service.fields.title') }}
                         </th>
                         <th>
                             {{ trans('cruds.service.fields.description') }}
@@ -46,7 +46,7 @@
                                 {{ $service->id ?? '' }}
                             </td>
                             <td>
-                                {{ $service->service_name ?? '' }}
+                                {{ $service->title ?? '' }}
                             </td>
                             <td>
                                 {{ $service->description ?? '' }}

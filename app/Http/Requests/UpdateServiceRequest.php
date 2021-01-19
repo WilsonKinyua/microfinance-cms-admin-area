@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Service;
+use App\Service;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Response;
@@ -17,13 +17,12 @@ class UpdateServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'service_name' => [
+            'title'       => [
                 'string',
-                'min:2',
-                'max:300',
                 'required',
             ],
-            'description'  => [
+            'description' => [
+                'string',
                 'required',
             ],
         ];

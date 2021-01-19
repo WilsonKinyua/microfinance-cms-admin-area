@@ -60,10 +60,30 @@
         @can('service_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.services.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/services") || request()->is("admin/services/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
+                    <i class="fa-fw fas fa-tasks c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.service.title') }}
+                </a>
+            </li>
+        @endcan
+        @can('contact_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.contacts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/contacts") || request()->is("admin/contacts/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-phone c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.contact.title') }}
+                </a>
+            </li>
+        @endcan
+        @can('home_page_slide_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.home-page-slides.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/home-page-slides") || request()->is("admin/home-page-slides/*") ? "c-active" : "" }}">
+                    <i class="fa-fw far fa-image c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.homePageSlide.title') }}
                 </a>
             </li>
         @endcan

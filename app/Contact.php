@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use \DateTimeInterface;
 
-class Role extends Model
+class Contact extends Model
 {
     use SoftDeletes, HasFactory;
 
-    public $table = 'roles';
+    public $table = 'contacts';
 
     protected $dates = [
         'created_at',
@@ -20,7 +20,10 @@ class Role extends Model
     ];
 
     protected $fillable = [
-        'title',
+        'street_name',
+        'phone',
+        'open_time',
+        'email',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -29,10 +32,5 @@ class Role extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-    }
-
-    public function permissions()
-    {
-        return $this->belongsToMany(Permission::class);
     }
 }

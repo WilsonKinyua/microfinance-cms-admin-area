@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Permission;
+use App\Permission;
 use Illuminate\Database\Seeder;
 
 class PermissionsTableSeeder extends Seeder
@@ -96,6 +96,46 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 22,
+                'title' => 'contact_create',
+            ],
+            [
+                'id'    => 23,
+                'title' => 'contact_edit',
+            ],
+            [
+                'id'    => 24,
+                'title' => 'contact_show',
+            ],
+            [
+                'id'    => 25,
+                'title' => 'contact_delete',
+            ],
+            [
+                'id'    => 26,
+                'title' => 'contact_access',
+            ],
+            [
+                'id'    => 27,
+                'title' => 'home_page_slide_create',
+            ],
+            [
+                'id'    => 28,
+                'title' => 'home_page_slide_edit',
+            ],
+            [
+                'id'    => 29,
+                'title' => 'home_page_slide_show',
+            ],
+            [
+                'id'    => 30,
+                'title' => 'home_page_slide_delete',
+            ],
+            [
+                'id'    => 31,
+                'title' => 'home_page_slide_access',
+            ],
+            [
+                'id'    => 32,
                 'title' => 'profile_password_edit',
             ],
         ];

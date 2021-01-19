@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use \DateTimeInterface;
 
-class Service extends Model
+class Permission extends Model
 {
     use SoftDeletes, HasFactory;
 
-    public $table = 'services';
+    public $table = 'permissions';
 
     protected $dates = [
         'created_at',
@@ -20,8 +20,7 @@ class Service extends Model
     ];
 
     protected $fillable = [
-        'service_name',
-        'description',
+        'title',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -11,18 +11,18 @@
             @method('PUT')
             @csrf
             <div class="form-group">
-                <label class="required" for="service_name">{{ trans('cruds.service.fields.service_name') }}</label>
-                <input class="form-control {{ $errors->has('service_name') ? 'is-invalid' : '' }}" type="text" name="service_name" id="service_name" value="{{ old('service_name', $service->service_name) }}" required>
-                @if($errors->has('service_name'))
+                <label class="required" for="title">{{ trans('cruds.service.fields.title') }}</label>
+                <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $service->title) }}" required>
+                @if($errors->has('title'))
                     <div class="invalid-feedback">
-                        {{ $errors->first('service_name') }}
+                        {{ $errors->first('title') }}
                     </div>
                 @endif
-                <span class="help-block">{{ trans('cruds.service.fields.service_name_helper') }}</span>
+                <span class="help-block">{{ trans('cruds.service.fields.title_helper') }}</span>
             </div>
             <div class="form-group">
                 <label class="required" for="description">{{ trans('cruds.service.fields.description') }}</label>
-                <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description" required>{{ old('description', $service->description) }}</textarea>
+                <input class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" type="text" name="description" id="description" value="{{ old('description', $service->description) }}" required>
                 @if($errors->has('description'))
                     <div class="invalid-feedback">
                         {{ $errors->first('description') }}

@@ -10,8 +10,8 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('service_name');
-            $table->longText('description');
+            $table->string('title');
+            $table->string('description');
             $table->timestamps();
             $table->softDeletes();
         });
