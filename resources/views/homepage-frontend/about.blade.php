@@ -4,79 +4,16 @@
 
 <main>
 
-    <div class="slider-area slider-height" data-background="{{ asset('assets_homepage/img/hero/h1_hero.jpg')}}">
-      <div class="slider-active">
-
-        <div class="single-slider">
-          <div class="slider-cap-wrapper">
-            <div class="hero__caption">
-              <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
-              <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
-
-              <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
-            </div>
-            <div class="hero__img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_img.jpg')}}" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="single-slider">
-          <div class="slider-cap-wrapper">
-            <div class="hero__caption">
-              <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
-              <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
-
-              <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
-            </div>
-            <div class="hero__img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_img2.jpg')}}" alt="">
+    <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="hero-cap text-center pt-50">
+              <h2>About us</h2>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="slider-footer section-bg d-none d-sm-block">
-        <div class="footer-wrapper">
-
-          <div class="single-caption">
-            <div class="single-img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_footer.png')}}" alt="">
-            </div>
-          </div>
-
-          <div class="single-caption">
-            <div class="caption-icon">
-              <span class="flaticon-clock"></span>
-            </div>
-            <div class="caption">
-              <p>Quick & Easy Loan</p>
-              <p>Approvals</p>
-            </div>
-          </div>
-
-          <div class="single-caption">
-            <div class="caption-icon">
-              <span class="flaticon-like"></span>
-            </div>
-            <div class="caption">
-              <p>Quick & Easy Loan</p>
-              <p>Approvals</p>
-            </div>
-          </div>
-
-          <div class="single-caption">
-            <div class="caption-icon">
-              <span class="flaticon-money"></span>
-            </div>
-            <div class="caption">
-              <p>Quick & Easy Loan</p>
-              <p>Approvals</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
 
@@ -106,67 +43,6 @@
               </div>
               <div class="about-back-img ">
                 <img src="{{ asset('assets_homepage/img/gallery/about1.png')}}" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="services-area pt-150 pb-150" data-background="{{ asset('assets_homepage/img/gallery/section_bg02.jpg')}}">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-10">
-
-            <div class="section-tittle text-center mb-80">
-              <span>Services that we are providing</span>
-              <h2>High Performance Services For All Industries.</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-work"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="services.html">Commercial Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan-1"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="services.html">Construction Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-like"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
           </div>
@@ -456,6 +332,5 @@
     </div>
 
   </main>
-
 
 @endsection

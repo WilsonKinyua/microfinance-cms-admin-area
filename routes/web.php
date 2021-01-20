@@ -1,6 +1,9 @@
 <?php
 
-Route::view('/', 'welcome');
+// use Illuminate\Routing\Route;
+
+
+// Route::view('/', 'welcome');
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
@@ -74,3 +77,12 @@ Route::group(['as' => 'frontend.', 'namespace' => 'Frontend', 'middleware' => ['
     Route::post('frontend/profile/destroy', 'ProfileController@destroy')->name('profile.destroy');
     Route::post('frontend/profile/password', 'ProfileController@password')->name('profile.password');
 });
+
+// Frontend
+
+
+Route::resource('/', 'HomePageController');
+Route::get('about', 'HomePageController@about')->name('company.about');
+Route::get('services', 'HomePageController@services')->name('company.services');
+Route::get('blog', 'HomePageController@blog')->name('company.blog');
+Route::get('contact', 'HomePageController@contact')->name('company.contact');
