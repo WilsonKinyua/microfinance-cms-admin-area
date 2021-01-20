@@ -48,7 +48,7 @@
 
             <div class="col-xl-2 col-lg-2 col-md-1">
               <div class="logo">
-                <a href="index-2.html"><img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""></a>
+                <a href="{{ route('home.page') }}"><img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""></a>
               </div>
             </div>
             <div class="col-xl-10 col-lg-10 col-md-10">
@@ -103,7 +103,7 @@
                 <div class="single-footer-caption mb-30">
 
                   <div class="footer-logo">
-                    <a href="index-2.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                    <a href="{{ route('home.page') }}"><img src="{{ asset('assets_homepage/img/logo/logo2_footer.png') }}" alt=""></a>
                   </div>
                   <div class="footer-pera">
                     <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing</p>
@@ -213,7 +213,7 @@
 
   @yield('scripts')
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> --}}
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -221,8 +221,8 @@
 
     gtag('config', 'UA-23581568-13');
   </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"rayId":"610166065b4d7263","version":"2020.12.2","si":10}'></script>
+  {{-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"rayId":"610166065b4d7263","version":"2020.12.2","si":10}'></script> --}}
 </body>
 
 </html>

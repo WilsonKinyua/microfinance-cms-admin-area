@@ -32,7 +32,7 @@
                 Duis aute irure dolor in reprehe.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et
                 dolore magna aliq.</p>
-              <a href="apply.html" class="btn">Apply for Loan</a>
+              <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
@@ -139,7 +139,7 @@
                 <input type="text" placeholder="Return Amount">
               </div>
               <div class="search-form">
-                <a href="apply.html">Apply for Loan</a>
+                <a href="{{ route('company.apply') }}">Apply for Loan</a>
               </div>
             </form>
           </div>
@@ -307,7 +307,7 @@
               </div>
               <div class="blog-captions">
                 <span>January 28, 2020</span>
-                <h2><a href="blog_details.html">The advent of pesticides brought
+                <h2><a href="#">The advent of pesticides brought
                     in its benefits and pitfalls.</a></h2>
                 <p>October 6, a2020by Steve</p>
               </div>
@@ -321,7 +321,7 @@
               </div>
               <div class="blog-captions">
                 <span>January 28, 2020</span>
-                <h2><a href="blog_details.html">The advent of pesticides brought
+                <h2><a href="#">The advent of pesticides brought
                     in its benefits and pitfalls.</a></h2>
                 <p>October 6, a2020by Steve</p>
               </div>

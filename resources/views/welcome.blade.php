@@ -13,7 +13,7 @@
               <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
               <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
 
-              <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+              <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
             </div>
             <div class="hero__img">
               <img src="{{ asset('assets_homepage/img/hero/hero_img.jpg')}}" alt="">
@@ -27,7 +27,7 @@
               <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
               <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
 
-              <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+              <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
             </div>
             <div class="hero__img">
               <img src="{{ asset('assets_homepage/img/hero/hero_img2.jpg')}}" alt="">
@@ -95,7 +95,7 @@
                 Duis aute irure dolor in reprehe.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et
                 dolore magna aliq.</p>
-              <a href="apply.html" class="btn">Apply for Loan</a>
+              <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
@@ -132,7 +132,7 @@
                 <span class="flaticon-work"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -143,7 +143,7 @@
                 <span class="flaticon-loan"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Commercial Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -154,7 +154,7 @@
                 <span class="flaticon-loan-1"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Construction Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -165,7 +165,7 @@
                 <span class="flaticon-like"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -263,7 +263,7 @@
                 <input type="text" placeholder="Return Amount">
               </div>
               <div class="search-form">
-                <a href="apply.html">Apply for Loan</a>
+                <a href="{{ route('company.services') }}">Apply for Loan</a>
               </div>
             </form>
           </div>
@@ -431,7 +431,7 @@
               </div>
               <div class="blog-captions">
                 <span>January 28, 2020</span>
-                <h2><a href="blog_details.html">The advent of pesticides brought
+                <h2><a href="#">The advent of pesticides brought
                     in its benefits and pitfalls.</a></h2>
                 <p>October 6, a2020by Steve</p>
               </div>
@@ -445,7 +445,7 @@
               </div>
               <div class="blog-captions">
                 <span>January 28, 2020</span>
-                <h2><a href="blog_details.html">The advent of pesticides brought
+                <h2><a href="#">The advent of pesticides brought
                     in its benefits and pitfalls.</a></h2>
                 <p>October 6, a2020by Steve</p>
               </div>

@@ -36,6 +36,11 @@ class HomePageController extends Controller
         return view('homepage-frontend.contact');
     }
 
+    public function apply()
+    {
+        return view('homepage-frontend.apply');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -33,7 +33,7 @@
                 <span class="flaticon-work"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -44,7 +44,7 @@
                 <span class="flaticon-loan"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Commercial Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -55,7 +55,7 @@
                 <span class="flaticon-loan-1"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Construction Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -66,7 +66,7 @@
                 <span class="flaticon-like"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -77,7 +77,7 @@
                 <span class="flaticon-work"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <span class="flaticon-like"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Business Loan</a></h5>
+                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -99,7 +99,7 @@
                 <span class="flaticon-loan"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Commercial Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
@@ -110,7 +110,7 @@
                 <span class="flaticon-loan-1"></span>
               </div>
               <div class="cat-cap">
-                <h5><a href="services.html">Construction Loans</a></h5>
+                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>

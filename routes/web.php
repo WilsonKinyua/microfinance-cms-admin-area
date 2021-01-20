@@ -81,8 +81,11 @@ Route::group(['as' => 'frontend.', 'namespace' => 'Frontend', 'middleware' => ['
 // Frontend
 
 
-Route::resource('/', 'HomePageController');
+// Route::resource('/', 'HomePageController');
+Route::get('/', 'HomePageController@index')->name('home.page');
 Route::get('about', 'HomePageController@about')->name('company.about');
 Route::get('services', 'HomePageController@services')->name('company.services');
 Route::get('blog', 'HomePageController@blog')->name('company.blog');
 Route::get('contact', 'HomePageController@contact')->name('company.contact');
+Route::get('apply', 'HomePageController@apply')->name('company.apply');
+// Route::get('apply', 'HomePageController@apply')->name('company.apply');
