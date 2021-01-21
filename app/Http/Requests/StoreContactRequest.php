@@ -22,14 +22,17 @@ class StoreContactRequest extends FormRequest
                 'nullable',
             ],
             'phone'       => [
-                'nullable',
-                'integer',
-                'min:-2147483648',
-                'max:2147483647',
+                'string',
+                'min:5',
+                'max:15',
+                'required',
             ],
             'open_time'   => [
                 'string',
                 'nullable',
+            ],
+            'email'       => [
+                'required',
             ],
         ];
     }

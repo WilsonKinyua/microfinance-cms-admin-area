@@ -37,8 +37,8 @@ class HomePageSlidesController extends Controller
     {
         $homePageSlide = HomePageSlide::create($request->all());
 
-        if ($request->input('slide_image', false)) {
-            $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('slide_image')))->toMediaCollection('slide_image');
+        if ($request->input('photo', false)) {
+            $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
         }
 
         if ($media = $request->input('ck-media', false)) {
@@ -59,16 +59,16 @@ class HomePageSlidesController extends Controller
     {
         $homePageSlide->update($request->all());
 
-        if ($request->input('slide_image', false)) {
-            if (!$homePageSlide->slide_image || $request->input('slide_image') !== $homePageSlide->slide_image->file_name) {
-                if ($homePageSlide->slide_image) {
-                    $homePageSlide->slide_image->delete();
+        if ($request->input('photo', false)) {
+            if (!$homePageSlide->photo || $request->input('photo') !== $homePageSlide->photo->file_name) {
+                if ($homePageSlide->photo) {
+                    $homePageSlide->photo->delete();
                 }
 
-                $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('slide_image')))->toMediaCollection('slide_image');
+                $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
             }
-        } elseif ($homePageSlide->slide_image) {
-            $homePageSlide->slide_image->delete();
+        } elseif ($homePageSlide->photo) {
+            $homePageSlide->photo->delete();
         }
 
         return redirect()->route('admin.home-page-slides.index');

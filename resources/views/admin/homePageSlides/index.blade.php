@@ -29,7 +29,10 @@
                             {{ trans('cruds.homePageSlide.fields.caption') }}
                         </th>
                         <th>
-                            {{ trans('cruds.homePageSlide.fields.slide_image') }}
+                            {{ trans('cruds.homePageSlide.fields.description') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.homePageSlide.fields.photo') }}
                         </th>
                         <th>
                             &nbsp;
@@ -49,9 +52,12 @@
                                 {{ $homePageSlide->caption ?? '' }}
                             </td>
                             <td>
-                                @if($homePageSlide->slide_image)
-                                    <a href="{{ $homePageSlide->slide_image->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $homePageSlide->slide_image->getUrl('thumb') }}">
+                                {{ $homePageSlide->description ?? '' }}
+                            </td>
+                            <td>
+                                @if($homePageSlide->photo)
+                                    <a href="st{{ $homePageSlide->photo->getUrl() }}" target="_blank" style="display: inline-block">
+                                        <img src="{{ $homePageSlide->photo->getUrl('thumb') }}">
                                     </a>
                                 @endif
                             </td>
@@ -134,7 +140,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 })
 
 </script>

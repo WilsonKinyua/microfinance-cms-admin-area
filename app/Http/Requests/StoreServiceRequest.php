@@ -22,7 +22,6 @@ class StoreServiceRequest extends FormRequest
                 'required',
             ],
             'description' => [
-                'string',
                 'required',
             ],
         ];

@@ -17,9 +17,12 @@ class UpdateHomePageSlideRequest extends FormRequest
     public function rules()
     {
         return [
-            'caption' => [
+            'caption'     => [
                 'string',
-                'nullable',
+                'required',
+            ],
+            'description' => [
+                'required',
             ],
         ];
     }

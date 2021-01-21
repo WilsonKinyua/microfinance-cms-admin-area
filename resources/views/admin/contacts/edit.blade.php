@@ -21,8 +21,8 @@
                 <span class="help-block">{{ trans('cruds.contact.fields.street_name_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="phone">{{ trans('cruds.contact.fields.phone') }}</label>
-                <input class="form-control {{ $errors->has('phone') ? 'is-invalid' : '' }}" type="number" name="phone" id="phone" value="{{ old('phone', $contact->phone) }}" step="1">
+                <label class="required" for="phone">{{ trans('cruds.contact.fields.phone') }}</label>
+                <input class="form-control {{ $errors->has('phone') ? 'is-invalid' : '' }}" type="text" name="phone" id="phone" value="{{ old('phone', $contact->phone) }}" required>
                 @if($errors->has('phone'))
                     <div class="invalid-feedback">
                         {{ $errors->first('phone') }}
@@ -41,8 +41,8 @@
                 <span class="help-block">{{ trans('cruds.contact.fields.open_time_helper') }}</span>
             </div>
             <div class="form-group">
-                <label for="email">{{ trans('cruds.contact.fields.email') }}</label>
-                <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email', $contact->email) }}">
+                <label class="required" for="email">{{ trans('cruds.contact.fields.email') }}</label>
+                <input class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" type="email" name="email" id="email" value="{{ old('email', $contact->email) }}" required>
                 @if($errors->has('email'))
                     <div class="invalid-feedback">
                         {{ $errors->first('email') }}

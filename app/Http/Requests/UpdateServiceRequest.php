@@ -22,7 +22,6 @@ class UpdateServiceRequest extends FormRequest
                 'required',
             ],
             'description' => [
-                'string',
                 'required',
             ],
         ];

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title> @yield('title') </title>
+  <title> Microfinance Company </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.html">
@@ -57,7 +57,7 @@
                 <div class="main-menu f-right d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li class=""><a href="/">Home</a></li>
+                      <li class=""><a href="{{ route('home.page') }}">Home</a></li>
                       <li><a href="{{ route('company.about') }}">About</a></li>
                       <li><a href="{{ route('company.services') }}">Services</a></li>
                       <li><a href="{{ route('company.blog') }}">Blog</a>
@@ -158,8 +158,9 @@
               <div class="footer-copy-right">
                 <p>
                   Copyright &copy;
-                  <script>document.write(new Date().getFullYear());</script> All Rights Reserved | <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://wezaprosoft.com/"
+                  <script>document.write(new Date().getFullYear());</script> All Rights Reserved |  by <a href="https://wezaprosoft.com/"
                     target="_blank">Weza Prosoft Limited</a>
+                    {{-- <i class="fa fa-heart" aria-hidden="true"></i> --}}
                 </p>
               </div>
             </div>

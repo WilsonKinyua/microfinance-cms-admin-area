@@ -4,7 +4,7 @@
 
 <main>
 
-    <div class="slider-area slider-height" data-background="{{ asset('assets_homepage/img/hero/h1_hero.jpg')}}">
+    <div class="slider-area slider-height" data-background="{{ asset('assets_homegpage/img/hero/h1_hero.jpg')}}">
       <div class="slider-active">
 
         <div class="single-slider">
@@ -16,7 +16,7 @@
               <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
             </div>
             <div class="hero__img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_img.jpg')}}" alt="">
+              <img src="{{ asset('assets_homepage/img/hero/1.png')}}" alt="">
             </div>
           </div>
         </div>

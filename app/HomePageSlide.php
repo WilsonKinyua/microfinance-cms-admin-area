@@ -14,11 +14,11 @@ class HomePageSlide extends Model implements HasMedia
 {
     use SoftDeletes, InteractsWithMedia, HasFactory;
 
-    public $table = 'home_page_slides';
-
     protected $appends = [
-        'slide_image',
+        'photo',
     ];
+
+    public $table = 'home_page_slides';
 
     protected $dates = [
         'created_at',
@@ -45,9 +45,9 @@ class HomePageSlide extends Model implements HasMedia
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
     }
 
-    public function getSlideImageAttribute()
+    public function getPhotoAttribute()
     {
-        $file = $this->getMedia('slide_image')->last();
+        $file = $this->getMedia('photo')->last();
 
         if ($file) {
             $file->url       = $file->getUrl();

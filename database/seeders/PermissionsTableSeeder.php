@@ -116,26 +116,154 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 27,
-                'title' => 'home_page_slide_create',
+                'title' => 'blog_create',
             ],
             [
                 'id'    => 28,
-                'title' => 'home_page_slide_edit',
+                'title' => 'blog_edit',
             ],
             [
                 'id'    => 29,
-                'title' => 'home_page_slide_show',
+                'title' => 'blog_show',
             ],
             [
                 'id'    => 30,
-                'title' => 'home_page_slide_delete',
+                'title' => 'blog_delete',
             ],
             [
                 'id'    => 31,
-                'title' => 'home_page_slide_access',
+                'title' => 'blog_access',
             ],
             [
                 'id'    => 32,
+                'title' => 'about_access',
+            ],
+            [
+                'id'    => 33,
+                'title' => 'about_our_company_create',
+            ],
+            [
+                'id'    => 34,
+                'title' => 'about_our_company_edit',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'about_our_company_show',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'about_our_company_delete',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'about_our_company_access',
+            ],
+            [
+                'id'    => 38,
+                'title' => 'why_choose_our_company_create',
+            ],
+            [
+                'id'    => 39,
+                'title' => 'why_choose_our_company_edit',
+            ],
+            [
+                'id'    => 40,
+                'title' => 'why_choose_our_company_show',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'why_choose_our_company_delete',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'why_choose_our_company_access',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'team_create',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'team_edit',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'team_show',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'team_delete',
+            ],
+            [
+                'id'    => 47,
+                'title' => 'team_access',
+            ],
+            [
+                'id'    => 48,
+                'title' => 'testimony_create',
+            ],
+            [
+                'id'    => 49,
+                'title' => 'testimony_edit',
+            ],
+            [
+                'id'    => 50,
+                'title' => 'testimony_show',
+            ],
+            [
+                'id'    => 51,
+                'title' => 'testimony_delete',
+            ],
+            [
+                'id'    => 52,
+                'title' => 'testimony_access',
+            ],
+            [
+                'id'    => 53,
+                'title' => 'home_page_access',
+            ],
+            [
+                'id'    => 54,
+                'title' => 'home_page_slide_create',
+            ],
+            [
+                'id'    => 55,
+                'title' => 'home_page_slide_edit',
+            ],
+            [
+                'id'    => 56,
+                'title' => 'home_page_slide_show',
+            ],
+            [
+                'id'    => 57,
+                'title' => 'home_page_slide_delete',
+            ],
+            [
+                'id'    => 58,
+                'title' => 'home_page_slide_access',
+            ],
+            [
+                'id'    => 59,
+                'title' => 'social_media_link_create',
+            ],
+            [
+                'id'    => 60,
+                'title' => 'social_media_link_edit',
+            ],
+            [
+                'id'    => 61,
+                'title' => 'social_media_link_show',
+            ],
+            [
+                'id'    => 62,
+                'title' => 'social_media_link_delete',
+            ],
+            [
+                'id'    => 63,
+                'title' => 'social_media_link_access',
+            ],
+            [
+                'id'    => 64,
                 'title' => 'profile_password_edit',
             ],
         ];
