@@ -11,7 +11,7 @@
             @csrf
             <div class="form-group">
                 <label class="required" for="caption">{{ trans('cruds.homePageSlide.fields.caption') }}</label>
-                <input class="form-control {{ $errors->has('caption') ? 'is-invalid' : '' }}" type="text" name="caption" id="caption" value="{{ old('caption', '') }}" required>
+                <input class="form-control {{ $errors->has('caption') ? 'is-invalid' : '' }}" type="text" name="caption" id="caption" value="{{ old('caption', '') }}" required placeholder="Achieve your financial goal">
                 @if($errors->has('caption'))
                     <div class="invalid-feedback">
                         {{ $errors->first('caption') }}
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label class="required" for="description">{{ trans('cruds.homePageSlide.fields.description') }}</label>
-                <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description" required>{{ old('description') }}</textarea>
+                <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description" placeholder="Small Business Loans For Daily Expenses." required>{{ old('description') }}</textarea>
                 @if($errors->has('description'))
                     <div class="invalid-feedback">
                         {{ $errors->first('description') }}
