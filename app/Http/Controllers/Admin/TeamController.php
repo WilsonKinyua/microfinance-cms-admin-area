@@ -31,7 +31,26 @@ class TeamController extends Controller
 
     public function store(StoreTeamRequest $request)
     {
-        $team = Team::create($request->all());
+        $data = ([
+            "full_name"         =>$request->full_name,
+            "professionalism"   =>$request->professionalism,
+            'facebook'          =>$request->facebook,
+            "twitter"           =>$request->twitter,
+            "website"           =>$request->website,
+            "instagram"         =>$request->instagram,
+            "email"             =>$request->email,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $file->move("storage/images_team", $name);
+            $data['file'] = $name;
+        }
+
+        $team = Team::create($data);
+
+        // $team = Team::create($request->all());
 
         return redirect()->route('admin.teams.index');
     }

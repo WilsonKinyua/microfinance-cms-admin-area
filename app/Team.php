@@ -27,6 +27,7 @@ class Team extends Model
         'website',
         'instagram',
         'email',
+        'file',
         'created_at',
         'updated_at',
         'deleted_at',

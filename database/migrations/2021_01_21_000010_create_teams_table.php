@@ -17,7 +17,7 @@ class CreateTeamsTable extends Migration
             $table->string('website')->nullable();
             $table->string('instagram')->nullable();
             $table->string('email')->nullable();
-            $table->string('file')->nullable();
+            $table->text('file')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
