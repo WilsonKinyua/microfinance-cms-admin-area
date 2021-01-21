@@ -56,12 +56,13 @@
                             </td>
                             <td>
                                 @if($homePageSlide->photo)
-                                    <a href="st{{ $homePageSlide->photo->getUrl() }}" target="_blank" style="display: inline-block">
+                                    <a href="{{ $homePageSlide->photo->getUrl() }}" target="_blank" style="display: inline-block">
                                         <img src="{{ $homePageSlide->photo->getUrl('thumb') }}">
                                     </a>
                                 @endif
                             </td>
                             <td>
+
                                 @can('home_page_slide_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.home-page-slides.show', $homePageSlide->id) }}">
                                         {{ trans('global.view') }}

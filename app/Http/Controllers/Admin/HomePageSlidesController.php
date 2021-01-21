@@ -39,6 +39,7 @@ class HomePageSlidesController extends Controller
 
         if ($request->input('photo', false)) {
             $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+           
         }
 
         if ($media = $request->input('ck-media', false)) {
