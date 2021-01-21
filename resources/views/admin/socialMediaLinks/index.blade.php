@@ -52,16 +52,18 @@
                                 {{ $socialMediaLink->id ?? '' }}
                             </td>
                             <td>
-                                {{ $socialMediaLink->facebook ?? '' }}
+                                <a href="https://www.facebook.com/{{ $socialMediaLink->facebook ?? '' }}" target="_blank" rel="noopener noreferrer">{{ $socialMediaLink->facebook ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $socialMediaLink->instagram ?? '' }}
+
+                                <a href="http://instagram.com/{{ $socialMediaLink->instagram ?? '' }}" target="_blank" rel="noopener noreferrer">{{ $socialMediaLink->instagram ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $socialMediaLink->phone ?? '' }}
+
+                                <a href="tel:+{{ $socialMediaLink->phone ?? '' }}">{{ $socialMediaLink->phone ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $socialMediaLink->email ?? '' }}
+                                <a href="mailto:{{ $socialMediaLink->email ?? '' }}">{{ $socialMediaLink->email ?? '' }}</a>
                             </td>
                             <td>
                                 @can('social_media_link_show')
