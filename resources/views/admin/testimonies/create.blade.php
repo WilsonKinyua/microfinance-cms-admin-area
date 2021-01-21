@@ -11,7 +11,7 @@
             @csrf
             <div class="form-group">
                 <label class="required" for="name">{{ trans('cruds.testimony.fields.name') }}</label>
-                <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
+                <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" placeholder="John Doe" required>
                 @if($errors->has('name'))
                     <div class="invalid-feedback">
                         {{ $errors->first('name') }}
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="professionalism">{{ trans('cruds.testimony.fields.professionalism') }}</label>
-                <input class="form-control {{ $errors->has('professionalism') ? 'is-invalid' : '' }}" type="text" name="professionalism" id="professionalism" value="{{ old('professionalism', '') }}">
+                <input class="form-control {{ $errors->has('professionalism') ? 'is-invalid' : '' }}" type="text" name="professionalism" id="professionalism" value="{{ old('professionalism', '') }}" placeholder="Co Founder">
                 @if($errors->has('professionalism'))
                     <div class="invalid-feedback">
                         {{ $errors->first('professionalism') }}
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="testimonial_caption">Testimonial (caption)</label>
-                <textarea class="form-control {{ $errors->has('testimonial_caption') ? 'is-invalid' : '' }}" name="testimonial_caption" id="testimonial_caption">{{ old('testimonial_caption') }}</textarea>
+                <textarea class="form-control {{ $errors->has('testimonial_caption') ? 'is-invalid' : '' }}" name="testimonial_caption" id="testimonial_caption" placeholder="Logisti Group is a representative...">{{ old('testimonial_caption') }}</textarea>
                 @if($errors->has('testimonial_caption'))
                     <div class="invalid-feedback">
                         {{ $errors->first('testimonial_caption') }}
