@@ -103,19 +103,19 @@
                                 {{ $team->professionalism ?? '' }}
                             </td>
                             <td>
-                                {{ $team->facebook ?? '' }}
+                                <a href="https://www.facebook.com/{{ $team->facebook ?? '' }}" target="_blank" rel="noopener noreferrer">{{ $team->facebook ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $team->twitter ?? '' }}
+                                <a href="https://twitter.com/{{ $team->twitter ?? '' }}" target="_blank" rel="noopener noreferrer">{{ $team->twitter ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $team->website ?? '' }}
+                                <a href="{{ $team->website ?? '' }} " target="_blank" rel="noopener noreferrer">{{ $team->website ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $team->instagram ?? '' }}
+                                <a href="http://instagram.com/ {{ $team->instagram ?? '' }}" target="_blank" rel="noopener noreferrer"> {{ $team->instagram ?? '' }}</a>
                             </td>
                             <td>
-                                {{ $team->email ?? '' }}
+                                <a href="mailto:{{ $team->email ?? '' }}">{{ $team->email ?? '' }}</a>
                             </td>
                             <td>
                                 <img style="width:40px; height:40px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
