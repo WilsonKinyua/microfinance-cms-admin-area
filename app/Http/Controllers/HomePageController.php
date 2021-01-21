@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -33,7 +34,9 @@ class HomePageController extends Controller
 
     public function contact()
     {
-        return view('homepage-frontend.contact');
+        $contact = Contact::all();
+
+        return view('homepage-frontend.contact', compact('contact'));
     }
 
     public function apply()
