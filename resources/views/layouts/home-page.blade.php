@@ -11,14 +11,15 @@
     =======================================================================================
 
     -->
-    
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title> Microfinance Company </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.html">
-  <link rel="shortcut icon" type="image/x-icon" href="https://newmark-imc.com/images/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="https://wezaprosoft.com/res/favicon.png">
+
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/slicknav.css') }}">
