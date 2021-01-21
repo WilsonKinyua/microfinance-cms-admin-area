@@ -31,8 +31,6 @@
                         .
                         Welcome back!
                         </h1>
-
-                    {{-- You are logged in!! --}}
                 </div>
             </div>
         </div>
