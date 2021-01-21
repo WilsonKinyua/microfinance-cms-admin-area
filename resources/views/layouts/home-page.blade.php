@@ -2,14 +2,23 @@
 <html class="no-js" lang="zxx">
 
 <head>
+    <!--
+
+    ========================================================================
+        Developed and managed by Developer Wilson
+        Reach me through email: wilsonkinyuam@gmail.com for any question or something
+        Phone Number: +254717255460
+    =======================================================================================
+
+    -->
+    
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title> Microfinance Company </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.html">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_homepage/img/favicon.ico') }}">
-
+  <link rel="shortcut icon" type="image/x-icon" href="https://newmark-imc.com/images/favicon.png">
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/slicknav.css') }}">

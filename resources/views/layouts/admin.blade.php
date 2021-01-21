@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <!--
+
+    ========================================================================
+        Developed and managed by Developer Wilson
+        Reach me through email: wilsonkinyuam@gmail.com for any question or something
+        Phone Number: +254717255460
+    =======================================================================================
+
+    -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,7 +43,7 @@
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <a class="c-header-brand d-lg-none" href="{{ route('home.page')}}">{{ trans('panel.site_title') }}</a>
+            <a class="c-header-brand d-lg-none" href="{{ route('home.page') }}">{{ trans('panel.site_title') }}</a>
 
             <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
                 <i class="fas fa-fw fa-bars"></i>

@@ -2,6 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <!--
+
+    ========================================================================
+        Developed and managed by Developer Wilson
+        Reach me through email: wilsonkinyuam@gmail.com for any question or something
+        Phone Number: +254717255460
+    =======================================================================================
+
+    -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

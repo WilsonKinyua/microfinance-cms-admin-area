@@ -2,12 +2,23 @@
 <html>
 
 <head>
+    <!--
+
+    ========================================================================
+        Developed and managed by Developer Wilson
+        Reach me through email: wilsonkinyuam@gmail.com for any question or something
+        Phone Number: +254717255460
+    =======================================================================================
+
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="https://newmark-imc.com/images/favicon.png">
 
-    <title>{{ trans('panel.site_title') }}</title>
+    <title>Microfinance Loan Company</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/coreui.min.css') }}" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
