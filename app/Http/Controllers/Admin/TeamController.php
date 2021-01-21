@@ -44,7 +44,7 @@ class TeamController extends Controller
         if($file = $request->file("photo")) {
 
             $name = time() . $file->getClientOriginalName();
-            $file->move("storage/images_team", $name);
+            $name = $file->move("storage/images_team", $name);
             $data['file'] = $name;
         }
 
@@ -64,7 +64,26 @@ class TeamController extends Controller
 
     public function update(UpdateTeamRequest $request, Team $team)
     {
-        $team->update($request->all());
+        $data = ([
+            "full_name"         =>$request->full_name,
+            "professionalism"   =>$request->professionalism,
+            'facebook'          =>$request->facebook,
+            "twitter"           =>$request->twitter,
+            "website"           =>$request->website,
+            "instagram"         =>$request->instagram,
+            "email"             =>$request->email,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("storage/images_team", $name);
+            $data['file'] = $name;
+        }
+
+        // $team = Team::create($data);
+
+        $team->update($data);
 
         return redirect()->route('admin.teams.index');
     }

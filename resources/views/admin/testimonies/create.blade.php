@@ -30,6 +30,16 @@
                 <span class="help-block">{{ trans('cruds.testimony.fields.professionalism_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="testimonial_caption">Testimonial (caption)</label>
+                <textarea class="form-control {{ $errors->has('testimonial_caption') ? 'is-invalid' : '' }}" name="testimonial_caption" id="testimonial_caption">{{ old('testimonial_caption') }}</textarea>
+                @if($errors->has('testimonial_caption'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('testimonial_caption') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.testimony.fields.testimonial_caption_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label for="photo">{{ trans('cruds.testimony.fields.photo') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="photo-dropzone">
                 </div>
@@ -39,16 +49,6 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.testimony.fields.photo_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="testimonial_caption">{{ trans('cruds.testimony.fields.testimonial_caption') }}</label>
-                <textarea class="form-control {{ $errors->has('testimonial_caption') ? 'is-invalid' : '' }}" name="testimonial_caption" id="testimonial_caption">{{ old('testimonial_caption') }}</textarea>
-                @if($errors->has('testimonial_caption'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('testimonial_caption') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.testimony.fields.testimonial_caption_helper') }}</span>
             </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">

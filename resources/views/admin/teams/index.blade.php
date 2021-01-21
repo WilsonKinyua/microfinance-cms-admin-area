@@ -47,6 +47,9 @@
                             {{ trans('cruds.team.fields.email') }}
                         </th>
                         <th>
+                            Photo
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -76,6 +79,9 @@
                         </td>
                         <td>
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            {{-- <input class="search" type="text" placeholder="{{ trans('global.search') }}"> --}}
                         </td>
                         <td>
                         </td>
@@ -111,6 +117,10 @@
                             <td>
                                 {{ $team->email ?? '' }}
                             </td>
+                            <td>
+                                <img style="width:40px; height:40px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
+                            </td>
+
                             <td>
                                 @can('team_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.teams.show', $team->id) }}">
@@ -190,7 +200,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 let visibleColumnsIndexes = null;
 $('.datatable thead').on('input', '.search', function () {
       let strict = $(this).attr('strict') || false

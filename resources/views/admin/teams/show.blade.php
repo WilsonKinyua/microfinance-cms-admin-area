@@ -79,6 +79,14 @@
                             {{ $team->email }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            Profile
+                        </th>
+                        <td>
+                            <img style="width:40px; height:40px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

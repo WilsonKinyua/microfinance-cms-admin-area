@@ -80,6 +80,16 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.team.fields.email_helper') }}</span>
             </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Image:</label>
+                        <div class="">
+                            <input type="file" name="photo" id="photo" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
