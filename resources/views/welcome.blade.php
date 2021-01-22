@@ -7,33 +7,26 @@
     <div class="slider-area slider-height" data-background="{{ asset('assets_homegpage/img/hero/h1_hero.jpg')}}">
       <div class="slider-active">
 
-        <div class="single-slider">
-          <div class="slider-cap-wrapper">
-            <div class="hero__caption">
-              <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
-              <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
-
-              <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
-            </div>
-            <div class="hero__img">
-              <img src="{{ asset('assets_homepage/img/hero/1.png')}}" alt="">
-            </div>
-          </div>
-        </div>
+        @foreach ($homePageSlides as $key => $slides)
 
         <div class="single-slider">
-          <div class="slider-cap-wrapper">
-            <div class="hero__caption">
-              <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
-              <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+                <p data-animation="fadeInLeft" data-delay=".2s"> {{ $slides->caption ?? '' }} </p>
+                <h1 data-animation="fadeInLeft" data-delay=".5s">{{ $slides->description ?? '' }}</h1>
 
-              <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+                <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+                </div>
+                <div class="hero__img">
+                    @if($slides->photo)
+                        <img class="img-responsive" src="{{ $slides->photo->getUrl() }}" alt="">
+                    @endif
+                </div>
             </div>
-            <div class="hero__img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_img2.jpg')}}" alt="">
-            </div>
-          </div>
         </div>
+
+        @endforeach
+
       </div>
 
       <div class="slider-footer section-bg d-none d-sm-block">
@@ -79,6 +72,9 @@
 
     </div>
 
+    @foreach ($aboutOurCompanies as $key => $about)
+
+
 
     <div class="about-low-area section-padding2">
       <div class="container">
@@ -88,24 +84,27 @@
 
               <div class="section-tittle mb-35">
                 <span>About Our Company</span>
-                <h2>Building a Brighter financial Future & Good Support.</h2>
+                <h2> {{ $about->title ?? '' }} </h2>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut eniminixm, quis nostrud exercitation ullamco laboris nisi ut aliquip exeaoauat.
-                Duis aute irure dolor in reprehe.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et
-                dolore magna aliq.</p>
+
+                {!! $about->description ?? '' !!}
+
+
               <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
 
             <div class="about-img ">
-              <div class="about-font-img d-none d-lg-block">
-                <img src="{{ asset('assets_homepage/img/gallery/about2.png')}}" alt="">
-              </div>
+              {{-- <div class="about-font-img d-none d-lg-block">
+                @if($about->photo)
+                    <img style="height: 500px; width:auto;"  src="{{ $about->photo->getUrl() }}">
+                @endif
+              </div> --}}
               <div class="about-back-img ">
-                <img src="{{ asset('assets_homepage/img/gallery/about1.png')}}" alt="">
+                @if($about->photo)
+                    <img style="height: 500px; width:auto;"  src="{{ $about->photo->getUrl() }}">
+                @endif
               </div>
             </div>
           </div>
@@ -113,6 +112,7 @@
       </div>
     </div>
 
+    @endforeach
 
     <div class="services-area pt-150 pb-150" data-background="{{ asset('assets_homepage/img/gallery/section_bg02.jpg')}}">
       <div class="container">
@@ -120,24 +120,30 @@
           <div class="col-lg-6 col-md-10">
 
             <div class="section-tittle text-center mb-80">
-              <span>Services that we are providing</span>
-              <h2>High Performance Services For All Industries.</h2>
+              {{-- <span>Services that we are providing</span>
+              <h2>High Performance Services For All Industries.</h2> --}}
+              <h2>Services that we are providing</h2>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-work"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
+
+         @foreach ($services as $key => $service)
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat text-center mb-50">
+                <div class="cat-icon">
+                    {{-- <span class="flaticon-work"></span> --}}
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="{{ route('company.services') }}">{{ $service->title ?? '' }}</a></h5>
+                    <p>{{ $service->description ?? '' }}</p>
+                </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+
+          @endforeach
+          {{-- <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="single-cat text-center mb-50">
               <div class="cat-icon">
                 <span class="flaticon-loan"></span>
@@ -169,20 +175,23 @@
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
 
+    @foreach ($whyChooseOurCompanies as $key => $choose)
 
     <div class="support-company-area section-padding3 fix">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
             <div class="support-location-img mb-50">
-              <img src="{{ asset('assets_homepage/img/gallery/single2.jpg')}}" alt="">
+                @if($choose->photo)
+                    <img src="{{ $choose->photo->getUrl() }}">
+                @endif
               <div class="support-img-cap">
-                <span>Since 1992</span>
+                <span>Since 2020</span>
               </div>
             </div>
           </div>
@@ -196,7 +205,7 @@
               <div class="support-caption">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                   et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                <div class="select-suport-items">
+                {{-- <div class="select-suport-items">
                   <label class="single-items">Aorem ipsum dgolor sitnfd amet dfgbn fbsdg
                     <input type="checkbox" checked="checked active">
                     <span class="checkmark"></span>
@@ -213,7 +222,7 @@
                     <input type="checkbox" checked="checked active">
                     <span class="checkmark"></span>
                   </label>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -221,6 +230,7 @@
       </div>
     </div>
 
+    @endforeach
 
     <div class="application-area pt-150 pb-140" data-background="{{ asset('assets_homepage/img/gallery/section_bg03.jpg')}}">
       <div class="container">

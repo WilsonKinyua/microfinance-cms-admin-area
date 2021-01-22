@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\AboutOurCompany;
 use App\Contact;
+use App\HomePageSlide;
+use App\Service;
+use App\WhyChooseOurCompany;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -14,7 +18,14 @@ class HomePageController extends Controller
      */
      public function index()
     {
-        return view('welcome');
+
+        $homePageSlides = HomePageSlide::with(['media'])->get();
+        $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
+        // $services = Service::orderBy('id','desc')->take(4)->get();
+        $services = Service::all();
+        $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->get();
+
+        return view('welcome',compact('homePageSlides'), compact('aboutOurCompanies','services','whyChooseOurCompanies'));
     }
 
     public function about()
