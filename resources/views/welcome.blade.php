@@ -312,47 +312,33 @@
           <div class="col-xl-11 col-lg-11 col-md-9">
             <div class="h1-testimonial-active">
 
-              <div class="single-testimonial text-center">
+                @foreach ($testimonies as $key => $tests)
 
-                <div class="testimonial-caption ">
-                  <div class="testimonial-top-cap">
-                    <img src="{{ asset('assets_homepage/img/gallery/testimonial.png')}}" alt="">
-                    <p>Logisti Group is a representative logistics operator providing full range of ser
-                      of customs clearance and transportation worl.</p>
-                  </div>
-
-                  <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                    <div class="founder-img">
-                      <img src="{{ asset('assets_homepage/img/testmonial/Homepage_testi.png')}}" alt="">
-                    </div>
-                    <div class="founder-text">
-                      <span>Jessya Inn</span>
-                      <p>Co Founder</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div class="single-testimonial text-center">
 
                 <div class="testimonial-caption ">
                   <div class="testimonial-top-cap">
                     <img src="{{ asset('assets_homepage/img/gallery/testimonial.png')}}" alt="">
-                    <p>Logisti Group is a representative logistics operator providing full range of ser
-                      of customs clearance and transportation worl.</p>
+                    <p>{{ $tests->testimonial_caption ?? '' }}</p>
                   </div>
 
                   <div class="testimonial-founder d-flex align-items-center justify-content-center">
                     <div class="founder-img">
-                      <img src="{{ asset('assets_homepage/img/testmonial/Homepage_testi.png')}}" alt="">
+                        @if($tests->photo)
+                                        <img src="{{ $tests->photo->getUrl() }}">
+                        @endif
+                      {{-- <img src="{{ asset('assets_homepage/img/testmonial/Homepage_testi.png')}}" alt=""> --}}
                     </div>
                     <div class="founder-text">
-                      <span>Jessya Inn</span>
-                      <p>Co Founder</p>
+                      <span>{{ $tests->name ?? '' }}</span>
+                      <p> {{ $tests->professionalism ?? '' }}</p>
                     </div>
                   </div>
                 </div>
               </div>
+
+              @endforeach
             </div>
           </div>
         </div>
@@ -372,34 +358,30 @@
           </div>
         </div>
         <div class="row">
+
+            @foreach ($blogs as $key => $blog)
+
+
           <div class="col-xl-6 col-lg-6 col-md-6">
 
             <div class="single-blogs mb-30">
               <div class="blog-images">
-                <img src="{{ asset('assets_homepage/img/gallery/blog1.png')}}" alt="">
+                {{-- <img src="{{ asset('assets_homepage/img/gallery/blog1.png')}}" alt=""> --}}
+                @if($blog->photo)
+                        <img src="{{ $blog->photo->getUrl() }}">
+                    @endif
               </div>
               <div class="blog-captions">
-                <span>January 28, 2020</span>
-                <h2><a href="#">The advent of pesticides brought
-                    in its benefits and pitfalls.</a></h2>
-                <p>October 6, a2020by Steve</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6">
+                <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
+                {{-- <span> {{ $blog->created_at->diffForHumans() ?? '' }} </span> --}}
+                <h2 style="text-transform: capitalize"><a>{{ $blog->title ?? '' }}</a></h2>
 
-            <div class="single-blogs mb-30">
-              <div class="blog-images">
-                <img src="{{ asset('assets_homepage/img/gallery/blog2.png')}}" alt="">
-              </div>
-              <div class="blog-captions">
-                <span>January 28, 2020</span>
-                <h2><a href="#">The advent of pesticides brought
-                    in its benefits and pitfalls.</a></h2>
-                <p>October 6, a2020by Steve</p>
+                <p>{{ $blog->description ?? '' }} </p>
               </div>
             </div>
           </div>
+
+          @endforeach
         </div>
       </div>
     </div>

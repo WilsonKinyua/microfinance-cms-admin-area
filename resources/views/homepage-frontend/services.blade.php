@@ -27,7 +27,25 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+
+            @foreach ($services as $key => $service)
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat text-center mb-50">
+                <div class="cat-icon">
+                    {{-- <span class="flaticon-work"></span> --}}
+                </div>
+                <div class="cat-cap">
+                    <h5><a >{{ $service->title ?? '' }}</a></h5>
+                    <p>{{ $service->description ?? '' }}</p>
+                </div>
+                </div>
+            </div>
+
+          @endforeach
+
+
+          {{-- <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="single-cat single-cat2 text-center mb-50">
               <div class="cat-icon">
                 <span class="flaticon-work"></span>
@@ -37,84 +55,9 @@
                 <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
               </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan-1"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-like"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-work"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-like"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan-1"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
+          </div> --}}
+
+
         </div>
       </div>
     </div>

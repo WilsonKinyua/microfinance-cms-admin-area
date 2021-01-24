@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\AboutOurCompany;
+use App\Blog;
 use App\Contact;
 use App\HomePageSlide;
 use App\Service;
 use App\Team;
+use App\Testimony;
 use App\WhyChooseOurCompany;
 use Illuminate\Http\Request;
 
@@ -26,19 +28,30 @@ class HomePageController extends Controller
         $services = Service::all();
         $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->orderBy('id','desc')->take(1)->get();
         $teams = Team::all();
+        $testimonies = Testimony::with(['media'])->get();
+        $blogs = Blog::with(['media'])->orderBy('id','desc')->take(2)->get();
 
         return view('welcome',compact('homePageSlides'),
-                 compact('aboutOurCompanies','services','whyChooseOurCompanies','teams'));
+                 compact('aboutOurCompanies','services','whyChooseOurCompanies','teams','testimonies','blogs'));
     }
 
     public function about()
     {
-        return view('homepage-frontend.about');
+        $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
+        $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->orderBy('id','desc')->take(1)->get();
+        $teams = Team::all();
+        $testimonies = Testimony::with(['media'])->get();
+        $services = Service::all();
+        $blogs = Blog::with(['media'])->orderBy('id','desc')->take(2)->get();
+
+        return view('homepage-frontend.about',compact('aboutOurCompanies','whyChooseOurCompanies','teams','testimonies','blogs'));
     }
 
     public function services()
     {
-        return view('homepage-frontend.services');
+        $services = Service::all();
+
+        return view('homepage-frontend.services',compact('services'));
     }
 
     public function blog()
