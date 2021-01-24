@@ -6,6 +6,7 @@ use App\AboutOurCompany;
 use App\Contact;
 use App\HomePageSlide;
 use App\Service;
+use App\Team;
 use App\WhyChooseOurCompany;
 use Illuminate\Http\Request;
 
@@ -23,9 +24,11 @@ class HomePageController extends Controller
         $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
         // $services = Service::orderBy('id','desc')->take(4)->get();
         $services = Service::all();
-        $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->get();
+        $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->orderBy('id','desc')->take(1)->get();
+        $teams = Team::all();
 
-        return view('welcome',compact('homePageSlides'), compact('aboutOurCompanies','services','whyChooseOurCompanies'));
+        return view('welcome',compact('homePageSlides'),
+                 compact('aboutOurCompanies','services','whyChooseOurCompanies','teams'));
     }
 
     public function about()

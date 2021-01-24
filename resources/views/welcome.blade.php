@@ -200,29 +200,10 @@
 
               <div class="section-tittle">
                 <span>Why Choose Our Company</span>
-                <h2>We Promise Sustainable Future For You.</h2>
+                <h2>{{ $choose->title ?? '' }}</h2>
               </div>
               <div class="support-caption">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                {{-- <div class="select-suport-items">
-                  <label class="single-items">Aorem ipsum dgolor sitnfd amet dfgbn fbsdg
-                    <input type="checkbox" checked="checked active">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="single-items">Consectetur adipisicing bfnelit, sedb dvbnfo
-                    <input type="checkbox" checked="checked active">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="single-items">Eiusmod tempor incididunt vmgldupout labore
-                    <input type="checkbox" checked="checked active">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="single-items">Admkde mibvnim veniam, quivds cnostrud.
-                    <input type="checkbox" checked="checked active">
-                    <span class="checkmark"></span>
-                  </label>
-                </div> --}}
+                <p>{!! $choose->description ?? '' !!}</p>
               </div>
             </div>
           </div>
@@ -288,80 +269,38 @@
           <div class="cl-xl-7 col-lg-8 col-md-10">
 
             <div class="section-tittle text-center mb-70">
-              <span>Our Loan Section Team Mambers</span>
+              <span>Team Mambers</span>
               <h2>Take a look to our professional team members.</h2>
             </div>
           </div>
         </div>
         <div class="row">
+
+            @foreach ($teams as $key => $team)
+
+
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="single-team mb-30">
               <div class="team-img">
-                <img src="{{ asset('assets_homepage/img/gallery/home_blog1.png')}}" alt="">
+                {{-- <img src="{{ asset($team->file )}}" alt=""> --}}
+                <img style="width:300px; height:300px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
 
                 <div class="team-social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                  <li><a href="https://www.facebook.com/{{ $team->facebook ?? '' }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/{{ $team->twitter ?? '' }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://instagram.com/ {{ $team->instagram ?? '' }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="{{ $team->website ?? '' }}"><i class="fas fa-globe" target="_blank"></i></a></li>
                 </div>
               </div>
               <div class="team-caption">
-                <h3><a href="#">Bruce Roberts</a></h3>
-                <p>Volunteer leader</p>
+                <h3><a>{{ $team->full_name ?? '' }}</a></h3>
+                <p>{{ $team->professionalism ?? '' }}r</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-team mb-30">
-              <div class="team-img">
-                <img src="{{ asset('assets_homepage/img/gallery/home_blog2.png')}}" alt="">
 
-                <div class="team-social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                </div>
-              </div>
-              <div class="team-caption">
-                <h3><a href="#">Bruce Roberts</a></h3>
-                <p>Volunteer leader</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-team mb-30">
-              <div class="team-img">
-                <img src="{{ asset('assets_homepage/img/gallery/home_blog3.png')}}" alt="">
+          @endforeach
 
-                <div class="team-social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                </div>
-              </div>
-              <div class="team-caption">
-                <h3><a href="#">Bruce Roberts</a></h3>
-                <p>Volunteer leader</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="single-team mb-30">
-              <div class="team-img">
-                <img src="{{ asset('assets_homepage/img/gallery/home_blog4.png')}}" alt="">
-
-                <div class="team-social">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                </div>
-              </div>
-              <div class="team-caption">
-                <h3><a href="#">Bruce Roberts</a></h3>
-                <p>Volunteer leader</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
