@@ -56,7 +56,9 @@ class HomePageController extends Controller
 
     public function blog()
     {
-        return view('homepage-frontend.blog');
+        $blogs = Blog::with(['media'])->orderBy('id','desc')->get();
+
+        return view('homepage-frontend.blog',compact('blogs'));
     }
 
     public function contact()

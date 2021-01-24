@@ -44,20 +44,6 @@
 
           @endforeach
 
-
-          {{-- <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat single-cat2 text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-work"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div> --}}
-
-
         </div>
       </div>
     </div>
