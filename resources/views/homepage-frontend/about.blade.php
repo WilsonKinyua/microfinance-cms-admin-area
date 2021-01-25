@@ -40,14 +40,9 @@
           <div class="col-lg-6 col-md-12">
 
             <div class="about-img ">
-              {{-- <div class="about-font-img d-none d-lg-block">
-                @if($about->photo)
-                    <img style="height: 500px; width:auto;"  src="{{ $about->photo->getUrl() }}">
-                @endif
-              </div> --}}
               <div class="about-back-img ">
-                @if($about->photo)
-                    <img style="height: 500px; width:auto;"  src="{{ $about->photo->getUrl() }}">
+                @if($about->file)
+                    <img style="height: 500px; width:auto;"  src="{{ asset($about->file) }}">
                 @endif
               </div>
             </div>
@@ -66,8 +61,8 @@
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
             <div class="support-location-img mb-50">
-                @if($choose->photo)
-                    <img src="{{ $choose->photo->getUrl() }}">
+                @if($choose->file)
+                    <img src="{{ asset($choose->file) }}">
                 @endif
               <div class="support-img-cap">
                 <span>Since 2020</span>
@@ -205,10 +200,9 @@
 
                   <div class="testimonial-founder d-flex align-items-center justify-content-center">
                     <div class="founder-img">
-                        @if($tests->photo)
-                                        <img src="{{ $tests->photo->getUrl() }}">
+                        @if($tests->file)
+                                <img src="{{ asset($tests->file)}}" alt="">
                         @endif
-                      {{-- <img src="{{ asset('assets_homepage/img/testmonial/Homepage_testi.png')}}" alt=""> --}}
                     </div>
                     <div class="founder-text">
                       <span>{{ $tests->name ?? '' }}</span>
@@ -249,14 +243,15 @@
 
             <div class="single-blogs mb-30">
               <div class="blog-images">
-                {{-- <img src="{{ asset('assets_homepage/img/gallery/blog1.png')}}" alt=""> --}}
-                @if($blog->photo)
-                        <img src="{{ $blog->photo->getUrl() }}">
-                    @endif
+                @if($blog->file)
+                        <img src="{{ asset($blog->file)}}" alt="">
+                @endif
               </div>
               <div class="blog-captions">
-                <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
-                {{-- <span> {{ $blog->created_at->diffForHumans() ?? '' }} </span> --}}
+                @if ($blog->created_at)
+                     <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
+                  @endif
+
                 <h2 style="text-transform: capitalize"><a>{{ $blog->title ?? '' }}</a></h2>
 
                 <p>{{ $blog->description ?? '' }} </p>

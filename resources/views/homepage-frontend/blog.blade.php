@@ -27,11 +27,13 @@
                   <div class="col-lg-6">
                     <article class="blog_item">
                         <div class="blog_item_img">
-                          @if($blog->photo)
-                                <img style="height:300px" class="card-img rounded-0"  src="{{ $blog->photo->getUrl() }}">
+                          @if($blog->file)
+                                <img style="height:300px" class="card-img rounded-0" src="{{ asset($blog->file)}}" alt="">
                           @endif
                           <a class="blog_item_date">
-                            <p>{{ $blog->created_at->diffForHumans() ?? '' }}</p>
+                            @if ($blog->created_at)
+                                 <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
+                            @endif
                             {{-- <p>Jan</p> --}}
                           </a>
                         </div>
@@ -51,26 +53,6 @@
 
                   @endforeach
               </div>
-              {{-- <nav class="blog-pagination justify-content-center d-flex">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a href="#" class="page-link" aria-label="Previous">
-                      <i class="ti-angle-left"></i>
-                    </a>
-                  </li>
-                  <li class="page-item">
-                    <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item active">
-                    <a href="#" class="page-link">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a href="#" class="page-link" aria-label="Next">
-                      <i class="ti-angle-right"></i>
-                    </a>
-                  </li>
-                </ul>
-              </nav> --}}
             </div>
           </div>
           {{-- <div class="col-lg-4">
