@@ -24,7 +24,6 @@ class HomePageController extends Controller
 
         $homePageSlides = HomePageSlide::with(['media'])->get();
         $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
-        // $services = Service::orderBy('id','desc')->take(4)->get();
         $services = Service::all();
         $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->orderBy('id','desc')->take(1)->get();
         $teams = Team::all();
