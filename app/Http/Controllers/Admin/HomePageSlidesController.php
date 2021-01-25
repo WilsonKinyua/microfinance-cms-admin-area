@@ -35,16 +35,20 @@ class HomePageSlidesController extends Controller
 
     public function store(StoreHomePageSlideRequest $request)
     {
-        $homePageSlide = HomePageSlide::create($request->all());
 
-        if ($request->input('photo', false)) {
-            $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-           
+        $data = ([
+            "caption"            =>$request->caption,
+            "description"       =>$request->description,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/home_page_slides", $name);
+            $data['file'] = $name;
         }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $homePageSlide->id]);
-        }
+        $homePageSlide = HomePageSlide::create($data);
 
         return redirect()->route('admin.home-page-slides.index');
     }
@@ -58,19 +62,21 @@ class HomePageSlidesController extends Controller
 
     public function update(UpdateHomePageSlideRequest $request, HomePageSlide $homePageSlide)
     {
-        $homePageSlide->update($request->all());
 
-        if ($request->input('photo', false)) {
-            if (!$homePageSlide->photo || $request->input('photo') !== $homePageSlide->photo->file_name) {
-                if ($homePageSlide->photo) {
-                    $homePageSlide->photo->delete();
-                }
 
-                $homePageSlide->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-            }
-        } elseif ($homePageSlide->photo) {
-            $homePageSlide->photo->delete();
+        $data = ([
+            "caption"            =>$request->caption,
+            "description"       =>$request->description,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/home_page_slides", $name);
+            $data['file'] = $name;
         }
+
+        $homePageSlide->update($data);
 
         return redirect()->route('admin.home-page-slides.index');
     }

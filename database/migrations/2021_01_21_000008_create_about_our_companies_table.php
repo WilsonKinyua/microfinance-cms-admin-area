@@ -12,6 +12,7 @@ class CreateAboutOurCompaniesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('description');
+            $table->text('file');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,6 +13,7 @@ class CreateTestimoniesTable extends Migration
             $table->string('name');
             $table->string('professionalism')->nullable();
             $table->longText('testimonial_caption')->nullable();
+            $table->text('file');
             $table->timestamps();
             $table->softDeletes();
         });

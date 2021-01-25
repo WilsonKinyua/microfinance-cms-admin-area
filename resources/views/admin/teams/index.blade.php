@@ -114,9 +114,11 @@
                             <td>
                                 <a href="http://instagram.com/ {{ $team->instagram ?? '' }}" target="_blank" rel="noopener noreferrer"> {{ $team->instagram ?? '' }}</a>
                             </td>
+
                             <td>
                                 <a href="mailto:{{ $team->email ?? '' }}">{{ $team->email ?? '' }}</a>
                             </td>
+
                             <td>
                                 <img style="width:40px; height:40px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
                             </td>

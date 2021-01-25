@@ -29,6 +29,7 @@ class HomePageSlide extends Model implements HasMedia
     protected $fillable = [
         'caption',
         'description',
+        'photo',
         'created_at',
         'updated_at',
         'deleted_at',

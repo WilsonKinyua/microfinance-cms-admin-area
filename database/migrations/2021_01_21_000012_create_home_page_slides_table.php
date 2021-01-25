@@ -12,6 +12,7 @@ class CreateHomePageSlidesTable extends Migration
             $table->bigIncrements('id');
             $table->string('caption');
             $table->longText('description');
+            $table->text('file');
             $table->timestamps();
             $table->softDeletes();
         });

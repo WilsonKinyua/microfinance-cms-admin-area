@@ -55,11 +55,7 @@
                                 {{ $homePageSlide->description ?? '' }}
                             </td>
                             <td>
-                                @if($homePageSlide->photo)
-                                    <a href="{{ $homePageSlide->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $homePageSlide->photo->getUrl('thumb') }}">
-                                    </a>
-                                @endif
+                                <img style="width:40px; height:40px" src="{{ asset($homePageSlide->file ? $homePageSlide->file: 'http://placehold.it/400x400') }}" alt="">
                             </td>
                             <td>
 
