@@ -18,8 +18,10 @@
                 <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
                 </div>
                 <div class="hero__img">
-                    @if($slides->photo)
-                        <img class="img-responsive" src="{{ $slides->photo->getUrl() }}" alt="">
+                    @if($slides->file)
+                        <img class="img-responsive" src="{{ asset($slides->file) }}" alt="">
+                        @else
+                        <img class="img-responsive" src="http://placehold.it/600x600" alt="">
                     @endif
                 </div>
             </div>
@@ -102,8 +104,8 @@
                 @endif
               </div> --}}
               <div class="about-back-img ">
-                @if($about->photo)
-                    <img style="height: 500px; width:auto;"  src="{{ $about->photo->getUrl() }}">
+                @if($about->file)
+                    <img style="height: 500px; width:auto;"  src="{{ asset($about->file) }}">
                 @endif
               </div>
             </div>
@@ -143,39 +145,6 @@
             </div>
 
           @endforeach
-          {{-- <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Commercial Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-loan-1"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Construction Loans</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="single-cat text-center mb-50">
-              <div class="cat-icon">
-                <span class="flaticon-like"></span>
-              </div>
-              <div class="cat-cap">
-                <h5><a href="{{ route('company.services') }}">Business Loan</a></h5>
-                <p>Consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore</p>
-              </div>
-            </div>
-          </div> --}}
         </div>
       </div>
     </div>
@@ -187,8 +156,8 @@
         <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
             <div class="support-location-img mb-50">
-                @if($choose->photo)
-                    <img src="{{ $choose->photo->getUrl() }}">
+                @if($choose->file)
+                    <img src="{{ asset($choose->file) }}">
                 @endif
               <div class="support-img-cap">
                 <span>Since 2020</span>
@@ -325,10 +294,9 @@
 
                   <div class="testimonial-founder d-flex align-items-center justify-content-center">
                     <div class="founder-img">
-                        @if($tests->photo)
-                                        <img src="{{ $tests->photo->getUrl() }}">
+                        @if($tests->file)
+                                <img src="{{ asset($tests->file) }}">
                         @endif
-                      {{-- <img src="{{ asset('assets_homepage/img/testmonial/Homepage_testi.png')}}" alt=""> --}}
                     </div>
                     <div class="founder-text">
                       <span>{{ $tests->name ?? '' }}</span>
@@ -366,14 +334,14 @@
 
             <div class="single-blogs mb-30">
               <div class="blog-images">
-                {{-- <img src="{{ asset('assets_homepage/img/gallery/blog1.png')}}" alt=""> --}}
-                @if($blog->photo)
-                        <img src="{{ $blog->photo->getUrl() }}">
-                    @endif
+                    <img src="{{ asset($blog->file)}}" alt="">
               </div>
               <div class="blog-captions">
-                <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
-                {{-- <span> {{ $blog->created_at->diffForHumans() ?? '' }} </span> --}}
+
+                  @if ($blog->created_at)
+                     <p>Posted {{ $blog->created_at->diffForHumans() ?? '' }}</p>
+                  @endif
+
                 <h2 style="text-transform: capitalize"><a>{{ $blog->title ?? '' }}</a></h2>
 
                 <p>{{ $blog->description ?? '' }} </p>
