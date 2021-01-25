@@ -35,15 +35,20 @@ class WhyChooseOurCompanyController extends Controller
 
     public function store(StoreWhyChooseOurCompanyRequest $request)
     {
-        $whyChooseOurCompany = WhyChooseOurCompany::create($request->all());
 
-        if ($request->input('photo', false)) {
-            $whyChooseOurCompany->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+        $data = ([
+            "title"            =>$request->title,
+            "description"       =>$request->description,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/about", $name);
+            $data['file'] = $name;
         }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $whyChooseOurCompany->id]);
-        }
+        $whyChooseOurCompany = WhyChooseOurCompany::create($data);
 
         return redirect()->route('admin.why-choose-our-companies.index');
     }
@@ -57,19 +62,19 @@ class WhyChooseOurCompanyController extends Controller
 
     public function update(UpdateWhyChooseOurCompanyRequest $request, WhyChooseOurCompany $whyChooseOurCompany)
     {
-        $whyChooseOurCompany->update($request->all());
+        $data = ([
+            "title"            =>$request->title,
+            "description"       =>$request->description,
+        ]);
 
-        if ($request->input('photo', false)) {
-            if (!$whyChooseOurCompany->photo || $request->input('photo') !== $whyChooseOurCompany->photo->file_name) {
-                if ($whyChooseOurCompany->photo) {
-                    $whyChooseOurCompany->photo->delete();
-                }
+        if($file = $request->file("photo")) {
 
-                $whyChooseOurCompany->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-            }
-        } elseif ($whyChooseOurCompany->photo) {
-            $whyChooseOurCompany->photo->delete();
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/about", $name);
+            $data['file'] = $name;
         }
+
+        $whyChooseOurCompany->update($data);
 
         return redirect()->route('admin.why-choose-our-companies.index');
     }

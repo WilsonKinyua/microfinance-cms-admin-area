@@ -35,15 +35,20 @@ class TestimoniesController extends Controller
 
     public function store(StoreTestimonyRequest $request)
     {
-        $testimony = Testimony::create($request->all());
+        $data = ([
+            "name"                  =>$request->name,
+            "professionalism"       =>$request->professionalism,
+            "testimonial_caption"   =>$request->testimonial_caption,
+        ]);
 
-        if ($request->input('photo', false)) {
-            $testimony->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/testimonies", $name);
+            $data['file'] = $name;
         }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $testimony->id]);
-        }
+        $testimony = Testimony::create($data);
 
         return redirect()->route('admin.testimonies.index');
     }
@@ -57,20 +62,20 @@ class TestimoniesController extends Controller
 
     public function update(UpdateTestimonyRequest $request, Testimony $testimony)
     {
-        $testimony->update($request->all());
+        $data = ([
+            "name"                  =>$request->name,
+            "professionalism"       =>$request->professionalism,
+            "testimonial_caption"   =>$request->testimonial_caption,
+        ]);
 
-        if ($request->input('photo', false)) {
-            if (!$testimony->photo || $request->input('photo') !== $testimony->photo->file_name) {
-                if ($testimony->photo) {
-                    $testimony->photo->delete();
-                }
+        if($file = $request->file("photo")) {
 
-                $testimony->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-            }
-        } elseif ($testimony->photo) {
-            $testimony->photo->delete();
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/testimonies", $name);
+            $data['file'] = $name;
         }
 
+        $testimony->update($data);
         return redirect()->route('admin.testimonies.index');
     }
 

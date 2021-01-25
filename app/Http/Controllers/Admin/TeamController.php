@@ -44,7 +44,7 @@ class TeamController extends Controller
         if($file = $request->file("photo")) {
 
             $name = time() . $file->getClientOriginalName();
-            $name = $file->move("storage/images_team", $name);
+            $name = $file->move("images/team", $name);
             $data['file'] = $name;
         }
 
@@ -77,7 +77,7 @@ class TeamController extends Controller
         if($file = $request->file("photo")) {
 
             $name = time() . $file->getClientOriginalName();
-            $name = $file->move("storage/images_team", $name);
+            $name = $file->move("images/team", $name);
             $data['file'] = $name;
         }
 

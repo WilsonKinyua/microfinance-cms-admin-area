@@ -28,6 +28,7 @@ class Blog extends Model implements HasMedia
 
     protected $fillable = [
         'title',
+        'file',
         'description',
         'category',
         'created_at',

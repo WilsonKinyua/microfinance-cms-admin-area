@@ -49,11 +49,8 @@
                                 {{ $whyChooseOurCompany->title ?? '' }}
                             </td>
                             <td>
-                                @if($whyChooseOurCompany->photo)
-                                    <a href="{{ $whyChooseOurCompany->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $whyChooseOurCompany->photo->getUrl('thumb') }}">
-                                    </a>
-                                @endif
+                                <img style="width:70px; height:70px" src="{{ asset($whyChooseOurCompany->file ? $whyChooseOurCompany->file: 'http://placehold.it/400x400') }}" alt="">
+
                             </td>
                             <td>
                                 @can('why_choose_our_company_show')

@@ -58,11 +58,7 @@
                                 {{ $testimony->professionalism ?? '' }}
                             </td>
                             <td>
-                                @if($testimony->photo)
-                                    <a href="{{ $testimony->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $testimony->photo->getUrl('thumb') }}">
-                                    </a>
-                                @endif
+                                <img style="width:70px; height:70px" src="{{ asset($testimony->file ? $testimony->file: 'http://placehold.it/400x400') }}" alt="">
                             </td>
                             <td>
                                 {{ $testimony->testimonial_caption ?? '' }}

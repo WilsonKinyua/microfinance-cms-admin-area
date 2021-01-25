@@ -29,6 +29,7 @@ class WhyChooseOurCompany extends Model implements HasMedia
     protected $fillable = [
         'title',
         'description',
+        'file',
         'created_at',
         'updated_at',
         'deleted_at',

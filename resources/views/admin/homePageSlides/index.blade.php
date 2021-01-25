@@ -55,7 +55,7 @@
                                 {{ $homePageSlide->description ?? '' }}
                             </td>
                             <td>
-                                <img style="width:40px; height:40px" src="{{ asset($homePageSlide->file ? $homePageSlide->file: 'http://placehold.it/400x400') }}" alt="">
+                                <img style="width:60px; height:40px" src="{{ asset($homePageSlide->file ? $homePageSlide->file: 'http://placehold.it/400x400') }}" alt="">
                             </td>
                             <td>
 

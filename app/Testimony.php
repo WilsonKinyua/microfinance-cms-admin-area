@@ -28,6 +28,7 @@ class Testimony extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'file',
         'professionalism',
         'testimonial_caption',
         'created_at',

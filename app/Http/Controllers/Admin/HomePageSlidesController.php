@@ -44,7 +44,7 @@ class HomePageSlidesController extends Controller
         if($file = $request->file("photo")) {
 
             $name = time() . $file->getClientOriginalName();
-            $name = $file->move("images/home_page_slides", $name);
+            $name = $file->move("images/slides", $name);
             $data['file'] = $name;
         }
 
@@ -72,7 +72,7 @@ class HomePageSlidesController extends Controller
         if($file = $request->file("photo")) {
 
             $name = time() . $file->getClientOriginalName();
-            $name = $file->move("images/home_page_slides", $name);
+            $name = $file->move("images/slides", $name);
             $data['file'] = $name;
         }
 

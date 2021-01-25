@@ -52,11 +52,8 @@
                             {{ trans('cruds.blog.fields.photo') }}
                         </th>
                         <td>
-                            @if($blog->photo)
-                                <a href="{{ $blog->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $blog->photo->getUrl('thumb') }}">
-                                </a>
-                            @endif
+                            <img style="width:70px; height:60px" src="{{ asset($blog->file ? $blog->file: 'http://placehold.it/400x400') }}" alt="">
+
                         </td>
                     </tr>
                 </tbody>

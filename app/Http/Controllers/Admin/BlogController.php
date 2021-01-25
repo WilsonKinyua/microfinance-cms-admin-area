@@ -35,15 +35,20 @@ class BlogController extends Controller
 
     public function store(StoreBlogRequest $request)
     {
-        $blog = Blog::create($request->all());
+        $data = ([
+            "title"              =>$request->title,
+            "description"       =>$request->description,
+            "category"          =>$request->category,
+        ]);
 
-        if ($request->input('photo', false)) {
-            $blog->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/blogs", $name);
+            $data['file'] = $name;
         }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $blog->id]);
-        }
+        $blog = Blog::create($data);
 
         return redirect()->route('admin.blogs.index');
     }
@@ -57,19 +62,20 @@ class BlogController extends Controller
 
     public function update(UpdateBlogRequest $request, Blog $blog)
     {
-        $blog->update($request->all());
+        $data = ([
+            "title"              =>$request->title,
+            "description"       =>$request->description,
+            "category"          =>$request->category,
+        ]);
 
-        if ($request->input('photo', false)) {
-            if (!$blog->photo || $request->input('photo') !== $blog->photo->file_name) {
-                if ($blog->photo) {
-                    $blog->photo->delete();
-                }
+        if($file = $request->file("photo")) {
 
-                $blog->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-            }
-        } elseif ($blog->photo) {
-            $blog->photo->delete();
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/blogs", $name);
+            $data['file'] = $name;
         }
+
+        $blog->update($data);
 
         return redirect()->route('admin.blogs.index');
     }

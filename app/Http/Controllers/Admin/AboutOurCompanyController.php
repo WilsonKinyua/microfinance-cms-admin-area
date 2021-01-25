@@ -35,15 +35,22 @@ class AboutOurCompanyController extends Controller
 
     public function store(StoreAboutOurCompanyRequest $request)
     {
-        $aboutOurCompany = AboutOurCompany::create($request->all());
 
-        if ($request->input('photo', false)) {
-            $aboutOurCompany->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
+
+        $data = ([
+            "title"            =>$request->title,
+            "description"       =>$request->description,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/about", $name);
+            $data['file'] = $name;
+
         }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $aboutOurCompany->id]);
-        }
+        $aboutOurCompany = AboutOurCompany::create($data);
 
         return redirect()->route('admin.about-our-companies.index');
     }
@@ -57,19 +64,22 @@ class AboutOurCompanyController extends Controller
 
     public function update(UpdateAboutOurCompanyRequest $request, AboutOurCompany $aboutOurCompany)
     {
-        $aboutOurCompany->update($request->all());
 
-        if ($request->input('photo', false)) {
-            if (!$aboutOurCompany->photo || $request->input('photo') !== $aboutOurCompany->photo->file_name) {
-                if ($aboutOurCompany->photo) {
-                    $aboutOurCompany->photo->delete();
-                }
 
-                $aboutOurCompany->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
-            }
-        } elseif ($aboutOurCompany->photo) {
-            $aboutOurCompany->photo->delete();
+        $data = ([
+            "title"            =>$request->title,
+            "description"       =>$request->description,
+        ]);
+
+        if($file = $request->file("photo")) {
+
+            $name = time() . $file->getClientOriginalName();
+            $name = $file->move("images/about", $name);
+            $data['file'] = $name;
+
         }
+
+        $aboutOurCompany->update($data);
 
         return redirect()->route('admin.about-our-companies.index');
     }

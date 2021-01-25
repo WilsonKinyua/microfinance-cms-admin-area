@@ -30,16 +30,15 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.description_helper') }}</span>
             </div>
-            <div class="form-group">
-                <label class="required" for="photo">{{ trans('cruds.aboutOurCompany.fields.photo') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="photo-dropzone">
-                </div>
-                @if($errors->has('photo'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('photo') }}
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Image:</label>
+                        <div class="">
+                            <input type="file" name="photo" id="photo" class="form-control">
+                        </div>
                     </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.photo_helper') }}</span>
+                </div>
             </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
