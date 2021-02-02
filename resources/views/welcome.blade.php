@@ -31,12 +31,12 @@
 
       </div>
 
-      {{-- <div class="slider-footer section-bg d-none d-sm-block">
+      <div class="slider-footer section-bg d-none d-sm-block">
         <div class="footer-wrapper">
 
           <div class="single-caption">
             <div class="single-img">
-              <img src="{{ asset('assets_homepage/img/hero/hero_footer.png')}}" alt="">
+              <img src="https://images.pexels.com/photos/3833052/pexels-photo-3833052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
             </div>
           </div>
 
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div> --}}
+      </div>
 
     </div>
 
