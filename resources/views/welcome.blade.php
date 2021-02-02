@@ -15,7 +15,7 @@
                 <p data-animation="fadeInLeft" data-delay=".2s"> {{ $slides->caption ?? '' }} </p>
                 <h1 data-animation="fadeInLeft" data-delay=".5s">{{ $slides->description ?? '' }}</h1>
 
-                <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+                {{-- <a href="{{ route('company.apply') }}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a> --}}
                 </div>
                 <div class="hero__img">
                     @if($slides->file)
@@ -31,7 +31,7 @@
 
       </div>
 
-      <div class="slider-footer section-bg d-none d-sm-block">
+      {{-- <div class="slider-footer section-bg d-none d-sm-block">
         <div class="footer-wrapper">
 
           <div class="single-caption">
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
     </div>
 
@@ -92,7 +92,7 @@
                 {!! $about->description ?? '' !!}
 
 
-              <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a>
+              {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
@@ -132,7 +132,7 @@
 
          @foreach ($services as $key => $service)
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                 <div class="cat-icon">
                     {{-- <span class="flaticon-work"></span> --}}
@@ -182,7 +182,7 @@
 
     @endforeach
 
-    <div class="application-area pt-150 pb-140" data-background="{{ asset('assets_homepage/img/gallery/section_bg03.jpg')}}">
+    {{-- <div class="application-area pt-150 pb-140" data-background="{{ asset('assets_homepage/img/gallery/section_bg03.jpg')}}">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-10">
@@ -229,10 +229,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
 
-    <div class="team-area section-padding30">
+    {{-- <div class="team-area section-padding30">
       <div class="container">
         <div class="row justify-content-center">
           <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -251,7 +251,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="single-team mb-30">
               <div class="team-img">
-                {{-- <img src="{{ asset($team->file )}}" alt=""> --}}
+                <img src="{{ asset($team->file )}}" alt="">
                 <img style="width:300px; height:300px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
 
                 <div class="team-social">
@@ -272,49 +272,53 @@
 
         </div>
       </div>
-    </div>
+    </div> --}}
+{{--
+    @if ($testimonies == '')
 
-
+    @else
     <div class="testimonial-area t-bg testimonial-padding">
-      <div class="container ">
-        <div class="row d-flex justify-content-center">
-          <div class="col-xl-11 col-lg-11 col-md-9">
-            <div class="h1-testimonial-active">
+        <div class="container ">
+          <div class="row d-flex justify-content-center">
+            <div class="col-xl-11 col-lg-11 col-md-9">
+              <div class="h1-testimonial-active">
 
-                @foreach ($testimonies as $key => $tests)
+                  @foreach ($testimonies as $key => $tests)
 
 
-              <div class="single-testimonial text-center">
+                <div class="single-testimonial text-center">
 
-                <div class="testimonial-caption ">
-                  <div class="testimonial-top-cap">
-                    <img src="{{ asset('assets_homepage/img/gallery/testimonial.png')}}" alt="">
-                    <p>{{ $tests->testimonial_caption ?? '' }}</p>
-                  </div>
-
-                  <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                    <div class="founder-img">
-                        @if($tests->file)
-                                <img src="{{ asset($tests->file) }}">
-                        @endif
+                  <div class="testimonial-caption ">
+                    <div class="testimonial-top-cap">
+                      <img src="{{ asset('assets_homepage/img/gallery/testimonial.png')}}" alt="">
+                      <p>{{ $tests->testimonial_caption ?? '' }}</p>
                     </div>
-                    <div class="founder-text">
-                      <span>{{ $tests->name ?? '' }}</span>
-                      <p> {{ $tests->professionalism ?? '' }}</p>
+
+                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                      <div class="founder-img">
+                          @if($tests->file)
+                                  <img src="{{ asset($tests->file) }}">
+                          @endif
+                      </div>
+                      <div class="founder-text">
+                        <span>{{ $tests->name ?? '' }}</span>
+                        <p> {{ $tests->professionalism ?? '' }}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              @endforeach
+                @endforeach
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    @endif --}}
 
 
-    <div class="home-blog-area section-padding30">
+
+    {{-- <div class="home-blog-area section-padding30">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-7 col-md-10">
@@ -352,7 +356,7 @@
           @endforeach
         </div>
       </div>
-    </div>
+    </div> --}}
 
   </main>
 

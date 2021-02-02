@@ -30,7 +30,7 @@
 
             @foreach ($services as $key => $service)
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-cat text-center mb-50">
                 <div class="cat-icon">
                     {{-- <span class="flaticon-work"></span> --}}

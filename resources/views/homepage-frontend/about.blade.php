@@ -34,7 +34,7 @@
                 {!! $about->description ?? '' !!}
 
 
-              <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a>
+              {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
@@ -88,7 +88,7 @@
     @endforeach
 
 
-    <div class="application-area pt-150 pb-140" data-background="{{ asset('assets_homepage/img/gallery/section_bg03.jpg')}}">
+    {{-- <div class="application-area pt-150 pb-140" data-background="{{ asset('assets_homepage/img/gallery/section_bg03.jpg')}}">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-10">
@@ -135,10 +135,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
 
-    <div class="team-area section-padding30">
+    {{-- <div class="team-area section-padding30">
       <div class="container">
         <div class="row justify-content-center">
           <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -157,7 +157,7 @@
           <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="single-team mb-30">
               <div class="team-img">
-                {{-- <img src="{{ asset($team->file )}}" alt=""> --}}
+                <img src="{{ asset($team->file )}}" alt="">
                 <img style="width:300px; height:300px" src="{{ asset($team->file ? $team->file: 'http://placehold.it/400x400') }}" alt="">
 
                 <div class="team-social">
@@ -178,10 +178,10 @@
 
         </div>
       </div>
-    </div>
+    </div> --}}
 
 
-    <div class="testimonial-area t-bg testimonial-padding">
+    {{-- <div class="testimonial-area t-bg testimonial-padding">
       <div class="container ">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-11 col-lg-11 col-md-9">
@@ -218,10 +218,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
 
-    <div class="home-blog-area section-padding30">
+    {{-- <div class="home-blog-area section-padding30">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-7 col-md-10">
@@ -265,7 +265,7 @@
 
         </div>
       </div>
-    </div>
+    </div> --}}
 
   </main>
 

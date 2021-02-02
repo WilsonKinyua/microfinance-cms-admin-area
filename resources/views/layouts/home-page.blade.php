@@ -14,10 +14,10 @@
 
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title> Microfinance Company </title>
+  <title> Sofepac</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.html">
+  <link rel="manifest" href="#">
   <link rel="shortcut icon" type="image/x-icon" href="https://wezaprosoft.com/res/favicon.png">
 
   <link rel="stylesheet" href="{{ asset('assets_homepage/css/bootstrap.min.css') }}">
@@ -43,7 +43,8 @@
       <div class="preloader-inner position-relative">
         <div class="preloader-circle"></div>
         <div class="preloader-img pere-text">
-          <img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt="">
+          {{-- <img src="{{ asset('assets_homepage/imgd/logo/logo.png')}}" alt=""> --}}
+         <h4 style="font-weight: 700"> Sofepac</h4>
         </div>
       </div>
     </div>
@@ -58,7 +59,10 @@
 
             <div class="col-xl-2 col-lg-2 col-md-1">
               <div class="logo">
-                <a href="{{ route('home.page') }}"><img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""></a>
+                <a href="{{ route('home.page') }}">
+                    {{-- <img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""> --}}
+                    <h1 style="text-transform: uppercase">Sofepac</h1>
+                </a>
               </div>
             </div>
             <div class="col-xl-10 col-lg-10 col-md-10">
@@ -70,7 +74,7 @@
                       <li class=""><a href="{{ route('home.page') }}">Home</a></li>
                       <li><a href="{{ route('company.about') }}">About</a></li>
                       <li><a href="{{ route('company.services') }}">Services</a></li>
-                      <li><a href="{{ route('company.blog') }}">Blog</a>
+                      <!--<li><a href="{{ route('company.blog') }}">Blog</a>-->
                         {{-- <ul class="submenu">
                           <li><a href="blog.html">Blog</a></li>
                           <li><a href="blog_details.html">Blog Details</a></li>
@@ -82,9 +86,9 @@
                     </ul>
                   </nav>
                 </div>
-                <div class="header-right-btn f-right d-none d-lg-block">
-                  <a href="#" class="btn header-btn">+880.762.009.00 </a>
-                </div>
+                <!--<div class="header-right-btn f-right d-none d-lg-block">-->
+                <!--  <a href="#" class="btn header-btn"> </a>-->
+                <!--</div>-->
               </div>
             </div>
 
@@ -98,15 +102,14 @@
 
   </header>
 
-
   @yield('content')
 
 
   <footer>
 
-    <div class="footer-area">
+    <div style="background-color: rgb(34, 24, 24)" class="">
       <div class="container">
-        <div class="footer-top footer-padding">
+        {{-- <div class="footer-top footer-padding">
           <div class="row justify-content-between">
             <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
               <div class="single-footer-caption mb-50">
@@ -161,7 +164,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="footer-bottom">
           <div class="row d-flex justify-content-between align-items-center">
             <div class="col-xl-9 col-lg-8">
