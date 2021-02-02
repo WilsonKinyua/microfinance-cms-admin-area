@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <link rel="shortcut icon" type="image/x-icon" href="https://wezaprosoft.com/res/favicon.png">
 
-    <title>Microfinance Loan Company</title>
+    <title>Sofepac</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/coreui.min.css') }}" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
