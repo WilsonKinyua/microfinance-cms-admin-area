@@ -9,7 +9,7 @@
     <div class="card-body">
         <form method="POST" action="{{ route("admin.about-our-companies.store") }}" enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label class="required" for="title">{{ trans('cruds.aboutOurCompany.fields.title') }}</label>
                 <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', '') }}" required>
                 @if($errors->has('title'))
@@ -18,9 +18,9 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.title_helper') }}</span>
-            </div>
+            </div> --}}
             <div class="form-group">
-                <label for="description">{{ trans('cruds.aboutOurCompany.fields.description') }}</label>
+                <label for="description">Contexte</label>
                 <textarea class="form-control ckeditor {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description">{!! old('description') !!}</textarea>
                 @if($errors->has('description'))
                     <div class="invalid-feedback">
@@ -28,6 +28,18 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.description_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="vision">Vision</label>
+                <textarea class="form-control ckeditor" name="vision" id="vision" >{!! old('vision') !!}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="mission">Mission</label>
+                <textarea class="form-control ckeditor" name="mission" id="mission" >{!! old('mission') !!}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="ourgoals">Our Goals</label>
+                <textarea class="form-control ckeditor" name="ourgoals" id="ourgoals">{!! old('ourgoals') !!}</textarea>
             </div>
             <div class="form-group row">
                 <div class="col-md-12">

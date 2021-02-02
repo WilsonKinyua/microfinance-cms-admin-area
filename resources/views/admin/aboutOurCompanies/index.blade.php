@@ -26,7 +26,16 @@
                             {{ trans('cruds.aboutOurCompany.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.aboutOurCompany.fields.title') }}
+                            Contexte
+                        </th>
+                        <th>
+                            Mission
+                        </th>
+                        <th>
+                            Vision
+                        </th>
+                        <th>
+                            Our Goals
                         </th>
                         <th>
                             {{ trans('cruds.aboutOurCompany.fields.photo') }}
@@ -46,7 +55,16 @@
                                 {{ $aboutOurCompany->id ?? '' }}
                             </td>
                             <td>
-                                {{ $aboutOurCompany->title ?? '' }}
+                                {!! $aboutOurCompany->description ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $aboutOurCompany->mission ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $aboutOurCompany->vision ?? '' !!}
+                            </td>
+                            <td>
+                                {!! $aboutOurCompany->ourgoals ?? '' !!}
                             </td>
                             <td>
                                 <img style="width:60px; height:60px" src="{{ asset($aboutOurCompany->file ? $aboutOurCompany->file: 'http://placehold.it/400x400') }}" alt="">

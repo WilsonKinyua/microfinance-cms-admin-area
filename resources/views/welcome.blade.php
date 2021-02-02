@@ -92,7 +92,7 @@
 
               <div class="section-tittle mb-35">
                 <span>About Our Company</span>
-                <h2> {{ $about->title ?? '' }} </h2>
+                <h2> Contexte </h2>
               </div>
 
                 {!! $about->description ?? '' !!}

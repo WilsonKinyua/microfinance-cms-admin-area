@@ -22,22 +22,60 @@
 
     <div class="about-low-area section-padding2">
       <div class="container">
+        {{-- <h2>ddddd</h2> --}}
+        {{-- <div class="section-tittle mb-35">
+            <span>About Our Company</span>
+            <h2> {{ $about->title ?? '' }} </h2>
+          </div> --}}
         <div class="row">
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-12 col-md-12">
             <div class="about-caption mb-50">
 
               <div class="section-tittle mb-35">
-                <span>About Our Company</span>
-                <h2> {{ $about->title ?? '' }} </h2>
+                <span> Contexte </span>
+                <h2> {!! $about->description ?? '' !!} </h2>
               </div>
 
-                {!! $about->description ?? '' !!}
+              {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="about-caption mb-50">
+
+              <div class="section-tittle mb-35">
+                <span>Mission</span>
+                <h2> {!! $about->mission ?? '' !!} </h2>
+              </div>
+
 
 
               {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
             </div>
           </div>
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-12 col-md-12">
+            <div class="about-caption mb-50">
+
+              <div class="section-tittle mb-35">
+                <span>Vision</span>
+                <h2> {!! $about->vision ?? '' !!} </h2>
+              </div>
+
+
+              {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12">
+            <div class="about-caption mb-50">
+
+              <div class="section-tittle mb-35">
+                <span>Our Goals</span>
+                <h2> {!! $about->ourgoals ?? '' !!} </h2>
+              </div>
+
+              {{-- <a href="{{ route('company.apply') }}" class="btn">Apply for Loan</a> --}}
+            </div>
+          </div>
+          {{-- <div class="col-lg-6 col-md-12">
 
             <div class="about-img ">
               <div class="about-back-img ">
@@ -46,7 +84,7 @@
                 @endif
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

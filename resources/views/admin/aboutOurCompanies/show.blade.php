@@ -33,10 +33,34 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.aboutOurCompany.fields.description') }}
+                            Contexte
                         </th>
                         <td>
                             {!! $aboutOurCompany->description !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Mission
+                        </th>
+                        <td>
+                            {!! $aboutOurCompany->mission !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Vision
+                        </th>
+                        <td>
+                            {!! $aboutOurCompany->vision !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Our Goals
+                        </th>
+                        <td>
+                            {!! $aboutOurCompany->ourgoals !!}
                         </td>
                     </tr>
                     <tr>

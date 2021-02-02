@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route("admin.about-our-companies.update", [$aboutOurCompany->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label class="required" for="title">{{ trans('cruds.aboutOurCompany.fields.title') }}</label>
                 <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $aboutOurCompany->title) }}" required>
                 @if($errors->has('title'))
@@ -19,7 +19,7 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.title_helper') }}</span>
-            </div>
+            </div> --}}
             <div class="form-group">
                 <label for="description">{{ trans('cruds.aboutOurCompany.fields.description') }}</label>
                 <textarea class="form-control ckeditor {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description">{!! old('description', $aboutOurCompany->description) !!}</textarea>
@@ -29,6 +29,18 @@
                     </div>
                 @endif
                 <span class="help-block">{{ trans('cruds.aboutOurCompany.fields.description_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="vision">Vision</label>
+                <textarea class="form-control ckeditor" name="vision" id="vision" >{!! old('vision',$aboutOurCompany->vision) !!}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="mission">Mission</label>
+                <textarea class="form-control ckeditor" name="mission" id="mission" >{!! old('mission',$aboutOurCompany->mission) !!}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="ourgoals">Our Goals</label>
+                <textarea class="form-control ckeditor" name="ourgoals" id="ourgoals">{!! old('ourgoals',$aboutOurCompany->ourgoals) !!}</textarea>
             </div>
             <div class="form-group row">
                 <div class="col-md-12">

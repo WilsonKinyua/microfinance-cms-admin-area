@@ -17,10 +17,6 @@ class StoreAboutOurCompanyRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'       => [
-                'string',
-                'required',
-            ],
             'description' => [
                 'required',
             ],

@@ -38,8 +38,11 @@ class AboutOurCompanyController extends Controller
 
 
         $data = ([
-            "title"            =>$request->title,
+            // "title"            =>$request->title,
             "description"       =>$request->description,
+            "vision"            =>$request->vision,
+            "mission"           =>$request->mission,
+            "ourgoals"          =>$request->ourgoals,
         ]);
 
         if($file = $request->file("photo")) {
@@ -67,8 +70,11 @@ class AboutOurCompanyController extends Controller
 
 
         $data = ([
-            "title"            =>$request->title,
+            // "title"            =>$request->title,
             "description"       =>$request->description,
+            "vision"            =>$request->vision,
+            "mission"           =>$request->mission,
+            "ourgoals"          =>$request->ourgoals,
         ]);
 
         if($file = $request->file("photo")) {

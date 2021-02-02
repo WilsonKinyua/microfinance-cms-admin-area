@@ -27,9 +27,11 @@ class AboutOurCompany extends Model implements HasMedia
     ];
 
     protected $fillable = [
-        'title',
         'description',
         'file',
+        'vision',
+        'mission',
+        'ourgoals',
         'created_at',
         'updated_at',
         'deleted_at',

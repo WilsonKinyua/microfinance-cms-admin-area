@@ -10,8 +10,10 @@ class CreateAboutOurCompaniesTable extends Migration
     {
         Schema::create('about_our_companies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
+            $table->longText('mission');
             $table->longText('description');
+            $table->longText('vision');
+            $table->longText('ourgoals');
             $table->text('file');
             $table->timestamps();
             $table->softDeletes();
