@@ -93,3 +93,4 @@ Route::get('blog', 'HomePageController@blog')->name('company.blog');
 Route::get('contact', 'HomePageController@contact')->name('company.contact');
 Route::get('apply', 'HomePageController@apply')->name('company.apply');
 // Route::get('apply', 'HomePageController@apply')->name('company.apply');
+Route::get('services/product', 'HomePageController@product')->name('company.product');

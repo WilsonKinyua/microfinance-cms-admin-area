@@ -67,6 +67,13 @@ class HomePageController extends Controller
         return view('homepage-frontend.contact', compact('contact'));
     }
 
+    public function product()
+    {
+        $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
+
+        return view('homepage-frontend.product', compact('aboutOurCompanies'));
+    }
+
     public function apply()
     {
         return view('homepage-frontend.apply');

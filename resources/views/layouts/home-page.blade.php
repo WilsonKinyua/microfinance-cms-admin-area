@@ -61,7 +61,7 @@
               <div class="logo">
                 <a href="{{ route('home.page') }}">
                     {{-- <img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""> --}}
-                    <h1 style="font-family: 'Rufina', serif; font-weight: 700; color: #000a2d;">Sofepac</h1>
+                    <h1 style="font-family: 'Rufina', serif; font-weight: 700; text-transform:uppercase; color: #000a2d;">Sofepac</h1>
                 </a>
               </div>
             </div>
@@ -84,7 +84,7 @@
                         <li><a href="{{ route('company.services') }}">Services</a>
                         <ul class="submenu">
                             <li><a href="{{ route('company.services') }}">Our Services</a></li>
-                            <li><a href="blog_details.html">Product</a></li>
+                            <li><a href="{{ route('company.product')}}">Product</a></li>
                         </ul>
                       </li>
                       <li><a href="{{ route('company.contact') }}">Contact</a></li>
