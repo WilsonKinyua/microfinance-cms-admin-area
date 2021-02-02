@@ -25,13 +25,14 @@ class HomePageController extends Controller
         $homePageSlides = HomePageSlide::with(['media'])->get();
         $aboutOurCompanies = AboutOurCompany::orderBy('id','desc')->take(1)->with(['media'])->get();
         $services = Service::all();
+        $servicelimit = Service::orderBy('id','desc')->take(3)->get();
         $whyChooseOurCompanies = WhyChooseOurCompany::with(['media'])->orderBy('id','desc')->take(1)->get();
         $teams = Team::all();
         $testimonies = Testimony::with(['media'])->get();
         $blogs = Blog::with(['media'])->orderBy('id','desc')->take(2)->get();
 
         return view('welcome',compact('homePageSlides'),
-                 compact('aboutOurCompanies','services','whyChooseOurCompanies','teams','testimonies','blogs'));
+                 compact('aboutOurCompanies','services','whyChooseOurCompanies','teams','testimonies','blogs','servicelimit'));
     }
 
     public function about()

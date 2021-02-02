@@ -40,17 +40,23 @@
             </div>
           </div>
 
-          <div class="single-caption">
+          @foreach ($servicelimit as $key => $service)
+
+          <div  class="single-caption">
             <div class="caption-icon">
               <span class="flaticon-clock"></span>
             </div>
             <div class="caption">
-              <p>Quick & Easy Loan</p>
-              <p>Approvals</p>
+              <p>{{ $service->title ?? '' }}</p>
+              {{-- <p>Approvals</p> --}}
             </div>
           </div>
 
-          <div class="single-caption">
+        @endforeach
+
+
+
+          {{-- <div class="single-caption">
             <div class="caption-icon">
               <span class="flaticon-like"></span>
             </div>
@@ -68,7 +74,7 @@
               <p>Quick & Easy Loan</p>
               <p>Approvals</p>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
 
