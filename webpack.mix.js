@@ -13,3 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+// mix.postCss('public/assets_homepage/css/style.css','public/assets_homepage')
+//     .postCss('public/assets_homepage/css/bootstrap.min.css','public/assets_homepage');
