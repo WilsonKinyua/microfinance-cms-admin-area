@@ -8,6 +8,7 @@
         Developed and managed by Developer Wilson
         Reach me through email: wilsonkinyuam@gmail.com for any question or something
         Phone Number: +254717255460
+        month - Jan 2021
     =======================================================================================
 
     -->
@@ -43,7 +44,7 @@
       <div class="preloader-inner position-relative">
         <div class="preloader-circle"></div>
         <div class="preloader-img pere-text">
-          {{-- <img src="{{ asset('assets_homepage/imgd/logo/logo.png')}}" alt=""> --}}
+          {{-- <img style="height: 1px" src="{{ asset('assets_homepage/imgd/logo/newlogo.jpg')}}" alt=""> --}}
          <h4 style="font-weight: 700"> Sofepac</h4>
         </div>
       </div>
@@ -60,8 +61,8 @@
             <div class="col-xl-2 col-lg-2 col-md-1">
               <div class="logo">
                 <a href="{{ route('home.page') }}">
-                    {{-- <img src="{{ asset('assets_homepage/img/logo/logo.png')}}" alt=""> --}}
-                    <h1 style="font-family: 'Rufina', serif; font-weight: 700; text-transform:uppercase; color: #000a2d;">Sofepac</h1>
+                    <img style="height: 80px" src="{{ asset('assets_homepage/img/logo/newlogo.jpg')}}" alt="">
+                    {{-- <h1 style="font-family: 'Rufina', serif; font-weight: 700; text-transform:uppercase; color: #000a2d;">Sofepac</h1> --}}
                 </a>
               </div>
             </div>
